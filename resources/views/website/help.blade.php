@@ -7,7 +7,7 @@
                 <div class="container">
                     <div class="ps-banner-contentv3">
                         <h4>{{$language[27][session()->get('lang')]}}</h4>
-                        <p><a href="/">{{$language[60][session()->get('lang')]}}</a> <span><i class="ti-angle-right"></i></span> {{$language[27][session()->get('lang')]}}</p>
+                        <p><a href="/">Home</a> <span><i class="ti-angle-right"></i></span> {{$language[27][session()->get('lang')]}}</p>
                     </div>
                 </div>
             </div>

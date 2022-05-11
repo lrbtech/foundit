@@ -8,10 +8,10 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="single-content">
-                        <h2>{{$language[3][session()->get('lang')]}}</h2>
+                        <h2>{{$language[67][session()->get('lang')]}}</h2>
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="/">{{$language[60][session()->get('lang')]}}</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">{{$language[3][session()->get('lang')]}}</li>
+                            <li class="breadcrumb-item"><a href="/">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">{{$language[67][session()->get('lang')]}}</li>
                         </ol>
                     </div>
                 </div>
@@ -37,10 +37,10 @@
                     </div> -->
                     <div class="account-card alert fade show">
                         <div class="account-title">
-                            <h3>{{$language[106][session()->get('lang')]}}</h3><button data-dismiss="alert">close</button>
+                            <h3>{{$language[68][session()->get('lang')]}}</h3><button data-dismiss="alert">close</button>
                         </div>
                         <div class="dash-review-widget">
-                            <h4>({{$reviews_count}}) {{$language[106][session()->get('lang')]}}</h4>
+                            <h4>({{$reviews_count}}) {{$language[68][session()->get('lang')]}}</h4>
                             <!-- <select class="custom-select">
                                 <option selected>Unread Review</option>
                                 <option value="1">All Review</option>
@@ -183,7 +183,7 @@
                     </div>
                 </div>
                 <div class="col-lg-4">
-                    <div class="account-card alert fade show">
+                    {{--<div class="account-card alert fade show">
                         <div class="account-title">
                             <h3>{{$language[107][session()->get('lang')]}}</h3>
                         </div>
@@ -205,26 +205,26 @@
                                 <p>AED {{$package_spent}}</p>
                             </li>
                         </ul>
-                    </div>
+                    </div>--}}
                     <div class="account-card alert fade show">
                         <div class="account-title">
-                            <h3>{{$language[112][session()->get('lang')]}}</h3>
+                            <h3>{{$language[69][session()->get('lang')]}}</h3>
                         </div>
                         <ul class="account-card-list">
                             <li>
-                                <h5>{{$language[113][session()->get('lang')]}}</h5>
+                                <h5>{{$language[70][session()->get('lang')]}}</h5>
                                 <h6>{{$total_ads}}</h6>
                             </li>
                             <li>
-                                <h5>{{$language[114][session()->get('lang')]}}</h5>
+                                <h5>{{$language[71][session()->get('lang')]}}</h5>
                                 <h6>2</h6>
                             </li>
                             <li>
-                                <h5>{{$language[115][session()->get('lang')]}}</h5>
+                                <h5>{{$language[72][session()->get('lang')]}}</h5>
                                 <h6>0</h6>
                             </li>
                             <li>
-                                <h5>{{$language[116][session()->get('lang')]}}</h5>
+                                <h5>{{$language[73][session()->get('lang')]}}</h5>
                                 <h6>0</h6>
                             </li>
                         </ul>

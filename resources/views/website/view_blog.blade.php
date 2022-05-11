@@ -19,10 +19,10 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="single-content">
-                        <h2>{{$language[168][session()->get('lang')]}}</h2>
+                        <h2>{{$language[131][session()->get('lang')]}}</h2>
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="/">{{$language[60][session()->get('lang')]}}</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">{{$language[168][session()->get('lang')]}}</li>
+                            <li class="breadcrumb-item"><a href="/">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">{{$language[131][session()->get('lang')]}}</li>
                         </ol>
                     </div>
                 </div>

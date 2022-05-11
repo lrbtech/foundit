@@ -8,10 +8,10 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="single-content">
-                        <h2>Search History</h2>
+                        <h2>{{$language[61][session()->get('lang')]}}</h2>
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="/">{{$language[60][session()->get('lang')]}}</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Search History</li>
+                            <li class="breadcrumb-item"><a href="/">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">{{$language[61][session()->get('lang')]}}</li>
                         </ol>
                     </div>
                 </div>
@@ -25,7 +25,7 @@
                 <div class="col-lg-12">
                     <div class="account-card alert fade show">
                         <div class="account-title">
-                            <h3>Search History</h3><button data-dismiss="alert">close</button>
+                            <h3>{{$language[61][session()->get('lang')]}}</h3><button data-dismiss="alert">close</button>
                         </div>
                         <ul class="review-list">
                             @foreach($search_history as $row)

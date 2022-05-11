@@ -47,12 +47,12 @@ padding: 50px;
     <div class="page-header">
       <div class="row">
         <div class="col-lg-6 main-header">
-          <h2>{{$language[4][Auth::guard('admin')->user()->lang]}}</h2>
+          <h2>{{$language[25][Auth::guard('admin')->user()->lang]}}</h2>
         </div>
         <div class="col-lg-6 breadcrumb-right">
           <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="#"><i class="pe-7s-home"></i></a></li>
-            <li class="breadcrumb-item active">{{$language[1][Auth::guard('admin')->user()->lang]}}</li>
+            <li class="breadcrumb-item active">{{$language[25][Auth::guard('admin')->user()->lang]}}</li>
           </ol>
         </div>
       </div>
@@ -71,7 +71,7 @@ padding: 50px;
               <!-- <i data-feather="database"></i> -->
               <i data-feather="shopping-bag"></i>
             </div>
-            <div class="media-body"><span class="m-0 text-white">Today Posts</span>
+            <div class="media-body"><span class="m-0 text-white">{{$language[26][Auth::guard('admin')->user()->lang]}}</span>
               <h4 class="mb-0 counter">{{$total_today_posts}}</h4>
               <!-- <i class="icon-bg" data-feather="database"></i> -->
               <i class="icon-bg" data-feather="shopping-bag"></i>
@@ -88,7 +88,7 @@ padding: 50px;
             <div class="align-self-center text-center">
               <i data-feather="shopping-bag"></i>
             </div>
-            <div class="media-body"><span class="m-0">This Month Posts</span>
+            <div class="media-body"><span class="m-0">{{$language[27][Auth::guard('admin')->user()->lang]}}</span>
               <h4 class="mb-0 counter">{{$current_month_posts}}</h4>
               <i class="icon-bg" data-feather="shopping-bag"></i>
             </div>
@@ -104,7 +104,7 @@ padding: 50px;
             <div class="align-self-center text-center">
               <div class="text-white i" data-feather="shopping-bag"></div>
             </div>
-            <div class="media-body"><span class="m-0 text-white">All Posts</span>
+            <div class="media-body"><span class="m-0 text-white">{{$language[28][Auth::guard('admin')->user()->lang]}}</span>
               <h4 class="mb-0 counter text-white">{{$total_posts}}</h4>
               <!-- <i class="icon-bg" data-feather="message-circle"></i> -->
               <i class="icon-bg" data-feather="shopping-bag"></i>
@@ -121,7 +121,7 @@ padding: 50px;
             <div class="align-self-center text-center">
               <div class="text-white i" data-feather="user-plus"></div>
             </div>
-            <div class="media-body"><span class="m-0 text-white">Today Customers</span>
+            <div class="media-body"><span class="m-0 text-white">{{$language[25][Auth::guard('admin')->user()->lang]}}</span>
               <h4 class="mb-0 counter text-white">{{$total_today_customers}}</h4>
               <i class="icon-bg" data-feather="user-plus"></i>
             </div>
@@ -138,7 +138,7 @@ padding: 50px;
               <!-- <i data-feather="database"></i> -->
               <div class="text-white i" data-feather="user-plus"></div>
             </div>
-            <div class="media-body"><span class="m-0 text-white">This Month Customers</span>
+            <div class="media-body"><span class="m-0 text-white">{{$language[30][Auth::guard('admin')->user()->lang]}}</span>
               <h4 class="mb-0 counter">{{$current_month_customers}}</h4>
               <!-- <i class="icon-bg" data-feather="database"></i> -->
               <i class="icon-bg" data-feather="user-plus"></i>
@@ -156,7 +156,7 @@ padding: 50px;
               <!-- <i data-feather="shopping-bag"></i> -->
               <div class="text-white i" data-feather="user-plus"></div>
             </div>
-            <div class="media-body"><span class="m-0">All Customers</span>
+            <div class="media-body"><span class="m-0">{{$language[31][Auth::guard('admin')->user()->lang]}}</span>
               <h4 class="mb-0 counter">{{$total_customers}}</h4>
               <!-- <i class="icon-bg" data-feather="shopping-bag"></i> -->
               <i class="icon-bg" data-feather="user-plus"></i>
@@ -173,7 +173,7 @@ padding: 50px;
             <div class="align-self-center text-center">
               <div class="text-white i" data-feather="user-plus"></div>
             </div>
-            <div class="media-body"><span class="m-0 text-white">Today Visitors</span>
+            <div class="media-body"><span class="m-0 text-white">{{$language[32][Auth::guard('admin')->user()->lang]}}</span>
               <h4 class="mb-0 counter text-white">{{$total_today_visitor}}</h4><i class="icon-bg" data-feather="user-plus"></i>
             </div>
           </div>
@@ -188,7 +188,7 @@ padding: 50px;
             <div class="align-self-center text-center">
               <div class="text-white i" data-feather="user-plus"></div>
             </div>
-            <div class="media-body"><span class="m-0 text-white">This Month Visitors</span>
+            <div class="media-body"><span class="m-0 text-white">{{$language[33][Auth::guard('admin')->user()->lang]}}</span>
               <h4 class="mb-0 counter text-white">{{$current_month_visitor}}</h4><i class="icon-bg" data-feather="user-plus"></i>
             </div>
           </div>
@@ -203,7 +203,7 @@ padding: 50px;
             <div class="align-self-center text-center">
               <div class="text-white i" data-feather="message-circle"></div>
             </div>
-            <div class="media-body"><span class="m-0 text-white">New Message</span>
+            <div class="media-body"><span class="m-0 text-white">{{$language[34][Auth::guard('admin')->user()->lang]}}</span>
               <h4 class="mb-0 counter text-white">{{$new_message}}</h4><i class="icon-bg" data-feather="message-circle"></i>
             </div>
           </div>

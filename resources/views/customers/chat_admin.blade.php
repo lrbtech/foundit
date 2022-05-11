@@ -19,7 +19,7 @@
             <img src="https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png" alt="avatar">
         </a>
         <div class="inbox-header-text">
-            <h5>Talk to Foundit Admin</h5>
+            <h5>{{$language[114][session()->get('lang')]}}</h5>
         </div>
     </div>
     <!-- <ul class="inbox-header-list">

@@ -20,10 +20,10 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="single-content">
-                        <h2>{{$language[80][session()->get('lang')]}}</h2>
+                        <h2>{{$language[150][session()->get('lang')]}}</h2>
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="/">{{$language[60][session()->get('lang')]}}</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">{{$language[80][session()->get('lang')]}}</li>
+                            <li class="breadcrumb-item"><a href="/">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">{{$language[150][session()->get('lang')]}}</li>
                         </ol>
                     </div>
                 </div>
@@ -74,7 +74,7 @@
                             <li>
                                 <a href="#">
                                 <i class="fas fa-eye"></i>
-                                <p>{{$language[81][session()->get('lang')]}}<span>({{$post_ad->view_count}})</span></p>
+                                <p>{{$language[151][session()->get('lang')]}}<span>({{$post_ad->view_count}})</span></p>
                                 </a>
                             </li>
                             <!-- <li>
@@ -84,12 +84,12 @@
                             </li> -->
                             <li>
                                 <a href="#"><i class="fas fa-star"></i>
-                                    <p>{{$language[82][session()->get('lang')]}}<span>({{$reviews_count}})</span></p>
+                                    <p>{{$language[152][session()->get('lang')]}}<span>({{$reviews_count}})</span></p>
                                 </a>
                             </li>
                             <li>
                                 <a href="#"><i class="fas fa-heart"></i>
-                                    <p>{{$language[83][session()->get('lang')]}}<span>({{$favourite_post_count}})</span></p>
+                                    <p>{{$language[153][session()->get('lang')]}}<span>({{$favourite_post_count}})</span></p>
                                 </a>
                             </li>
                         </ul>
@@ -123,9 +123,9 @@
                                     <!-- <button type="button"><i class="fas fa-heart-o"></i><span>bookmark</span></button> -->
                                     @if(Auth::check())
                                         @if(empty($favourite))
-                                        <button type="button" onclick="SaveFavourite({{$post_ad->id}})"><i class="far fa-heart" aria-hidden="true"></i><span>{{$language[83][session()->get('lang')]}}</span></button>
+                                        <button type="button" onclick="SaveFavourite({{$post_ad->id}})"><i class="far fa-heart" aria-hidden="true"></i><span>{{$language[153][session()->get('lang')]}}</span></button>
                                         @else 
-                                        <button type="button" onclick="DeleteFavourite({{$favourite->id}})"><i class="fas fa-heart"></i><span>{{$language[83][session()->get('lang')]}}</span></button>
+                                        <button type="button" onclick="DeleteFavourite({{$favourite->id}})"><i class="fas fa-heart"></i><span>{{$language[153][session()->get('lang')]}}</span></button>
                                         @endif
                                     @endif
                                 </li>
@@ -133,23 +133,23 @@
                                     <button type="button"><i class="fas fa-exclamation-triangle"></i><span>{{$language[90][session()->get('lang')]}}</span></button>
                                 </li> -->
                                 <li>
-                                    <button type="button"><i class="fas fa-share-alt"></i><span>{{$language[91][session()->get('lang')]}}</span></button>
+                                    <button type="button"><i class="fas fa-share-alt"></i><span>{{$language[154][session()->get('lang')]}}</span></button>
                                 </li>
                             </ul>
                         </div>
                     </div>
                     <div class="ad-details-card">
                         <div class="ad-details-title">
-                            <h5>{{$language[89][session()->get('lang')]}}</h5>
+                            <h5>{{$language[155][session()->get('lang')]}}</h5>
                         </div>
                         <div class="ad-details-specific translate">
                             <ul>
                                 <li>
-                                    <h6>{{$language[93][session()->get('lang')]}}:</h6>
+                                    <h6>{{$language[156][session()->get('lang')]}}:</h6>
                                     <p>AED {{$post_ad->price}}</p>
                                 </li>
                                 <li>
-                                    <h6>{{$language[94][session()->get('lang')]}}:</h6>
+                                    <h6>{{$language[157][session()->get('lang')]}}:</h6>
                                     <p>
                                         @if($user->business_type == 0)
                                         personal
@@ -159,23 +159,23 @@
                                     </p>
                                 </li>
                                 <li>
-                                    <h6>{{$language[95][session()->get('lang')]}}:</h6>
+                                    <h6>{{$language[158][session()->get('lang')]}}:</h6>
                                     <p>{{ \App\Http\Controllers\HomeController::humanreadtime($post_ad->created_at) }}</p>
                                 </li>
                                 <li>
-                                    <h6>{{$language[92][session()->get('lang')]}}:</h6>
+                                    <h6>{{$language[159][session()->get('lang')]}}:</h6>
                                     <p>{{ \App\Http\Controllers\HomeController::viewcityname($post_ad->area,$post_ad->city) }}</p>
                                 </li>
                                 <li>
-                                    <h6>{{$language[11][session()->get('lang')]}}:</h6>
+                                    <h6>{{$language[160][session()->get('lang')]}}:</h6>
                                     <p>{{ \App\Http\Controllers\HomeController::viewcategoryname($post_ad->category) }}</p>
                                 </li>
                                 <li>
-                                    <h6>{{$language[96][session()->get('lang')]}}:</h6>
+                                    <h6>{{$language[161][session()->get('lang')]}}:</h6>
                                     <p>{{ \App\Http\Controllers\HomeController::langchange($post_ad->item_condition) }}</p>
                                 </li>
                                 <li>
-                                    <h6>{{$language[97][session()->get('lang')]}}:</h6>
+                                    <h6>{{$language[162][session()->get('lang')]}}:</h6>
                                     <p>{{ \App\Http\Controllers\HomeController::langchange($post_ad->price_condition) }}</p>
                                 </li>
                                 <!-- <li>
@@ -187,7 +187,7 @@
                     </div>
                     <div class="ad-details-card">
                         <div class="ad-details-title">
-                            <h5>{{$language[98][session()->get('lang')]}}</h5>
+                            <h5>{{$language[163][session()->get('lang')]}}</h5>
                         </div>
                         <div class="ad-details-descrip translate">
                             <p>
@@ -197,7 +197,7 @@
                     </div>
                     <div class="ad-details-card">
                         <div class="ad-details-title">
-                            <h5>{{$language[82][session()->get('lang')]}} ({{$reviews_count}})</h5>
+                            <h5>{{$language[164][session()->get('lang')]}} ({{$reviews_count}})</h5>
                         </div>
                         <div class="ad-details-review">
                             <ul class="review-list">
@@ -382,33 +382,33 @@
                     @else 
                     <button style="width:100%;" onclick="Login()" class="ad-details-number">
                         <i class="fas fa-phone-alt"></i>
-                        <span>{{$language[84][session()->get('lang')]}}</span>
+                        <span>{{$language[165][session()->get('lang')]}}</span>
                     </button>
                     @endif
                     @if(Auth::check())
                         @if(Auth::user()->id != $post_ad->customer_id)
                         <button style="width:100%;" onclick="SaveChat({{$post_ad->id}})" class="ad-details-price">
-                            <h5>{{$language[85][session()->get('lang')]}}</h5>
+                            <h5>{{$language[166][session()->get('lang')]}}</h5>
                             <!-- <span></span> -->
                             <i class="flaticon-chat"></i>
                         </button>
                         @else
                         <button style="width:100%;" onclick="YourPost()" class="ad-details-price">
-                            <h5>{{$language[85][session()->get('lang')]}}</h5>
+                            <h5>{{$language[166][session()->get('lang')]}}</h5>
                             <!-- <span></span> -->
                             <i class="flaticon-chat"></i>
                         </button>
                         @endif
                     @else 
                     <button style="width:100%;" onclick="Login()" class="ad-details-price">
-                        <h5>{{$language[85][session()->get('lang')]}}</h5>
+                        <h5>{{$language[166][session()->get('lang')]}}</h5>
                         <!-- <span></span> -->
                         <i class="flaticon-chat"></i>
                     </button>
                     @endif
                     <div class="ad-details-card">
                         <div class="ad-details-title">
-                            <h5>{{$language[86][session()->get('lang')]}}</h5>
+                            <h5>{{$language[167][session()->get('lang')]}}</h5>
                         </div>
                         <div class="ad-details-profile">
                             <div class="author-img">
@@ -433,21 +433,21 @@
                             </ul> -->
                             <ul class="author-list">
                                 <li>
-                                    <h6>{{$language[87][session()->get('lang')]}}</h6>
+                                    <h6>{{$language[168][session()->get('lang')]}}</h6>
                                     <p>{{$author_total_ads}}</p>
                                 </li>
                                 <li>
-                                    <h6>{{$language[88][session()->get('lang')]}}</h6>
+                                    <h6>{{$language[169][session()->get('lang')]}}</h6>
                                     <p>{{$author_reviews_count}}</p>
                                 </li>
                                 <li>
-                                    <h6>{{$language[83][session()->get('lang')]}}</h6>
+                                    <h6>{{$language[170][session()->get('lang')]}}</h6>
                                     <p>{{$author_bookmark}}</p>
                                 </li>
                             </ul>
                             <div class="author-details translate">
-                                <h6>{{$language[100][session()->get('lang')]}}:{{ \App\Http\Controllers\HomeController::humanreadtime($user->created_at) }}</h6>
-                                <h6>address:
+                                <h6>{{$language[173][session()->get('lang')]}}:{{ \App\Http\Controllers\HomeController::humanreadtime($user->created_at) }}</h6>
+                                <h6>{{$language[174][session()->get('lang')]}}:
                                 {{ \App\Http\Controllers\HomeController::langchange($post_ad->address) }}
                                 </h6>
                             </div>
@@ -456,7 +456,7 @@
 
                     <div class="ad-details-card">
                         <div class="ad-details-title">
-                            <h5>{{$language[92][session()->get('lang')]}}</h5>
+                            <h5>{{$language[171][session()->get('lang')]}}</h5>
                         </div>
                         <div class="ad-details-location">
                             <div class="map" id="map" style="width:100%;height:300px;"></div>
@@ -570,7 +570,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-center-heading">
-                        <h2>{{$language[99][session()->get('lang')]}}</h2>
+                        <h2>{{$language[172][session()->get('lang')]}}</h2>
                         <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit aspernatur illum vel sunt libero
                             voluptatum repudiandae veniam maxime tenetur.</p> -->
                     </div>

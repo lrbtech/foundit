@@ -43,8 +43,8 @@
                     <h2>All Posts</h2>
                     @endif
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="/">{{$language[60][session()->get('lang')]}}</a></li>
-                        <li class="breadcrumb-item"><a href="/category-list">{{$language[76][session()->get('lang')]}}</a></li>
+                        <li class="breadcrumb-item"><a href="/">Home</a></li>
+                        <li class="breadcrumb-item"><a href="/category-list">All Posts</a></li>
                         <!-- <li class="breadcrumb-item active" aria-current="page">category details</li> -->
                         @if($search1 != '0')
                         <li class="breadcrumb-item active" aria-current="page">{{$search1}}</li>
@@ -145,7 +145,7 @@
                     <div class="col-md-6 col-lg-12">
                         <div class="product-sidebar">
                             <div class="product-sidebar-title">
-                                <h6>{{$language[78][session()->get('lang')]}}</h6>
+                                <h6>{{$language[95][session()->get('lang')]}}</h6>
                             </div>
                             <div class="product-sidebar-content">
                                 <!-- <div class="product-sidebar-search">
@@ -198,7 +198,7 @@
                     <div class="col-md-6 col-lg-12">
                         <div class="product-sidebar">
                             <div class="product-sidebar-title">
-                                <h6>{{$language[79][session()->get('lang')]}}</h6>
+                                <h6>{{$language[96][session()->get('lang')]}}</h6>
                             </div>
                             <div class="product-sidebar-content">
                                 <!-- <div class="product-sidebar-search"><input type="text" placeholder="Search"></div> -->

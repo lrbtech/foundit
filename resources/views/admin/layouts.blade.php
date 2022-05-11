@@ -149,112 +149,78 @@
             <ul class="iconMenu-bar custom-scrollbar">
               
               <li>
-                <a class="bar-icons" href="/admin/dashboard"><i class="pe-7s-home"></i><span>{{$language[3][Auth::guard('admin')->user()->lang]}}</span></a>
-                <!-- <ul class="iconbar-mainmenu custom-scrollbar">
-                  <li class="iconbar-header">Dashboard</li>
-                  <li class="dashboard"><a class="dashboard" href="/admin/dashboard">Dashboard</a></li>
-                </ul> -->
+                <a class="bar-icons" href="/admin/dashboard"><i class="pe-7s-home"></i><span>{{$language[1][Auth::guard('admin')->user()->lang]}}</span></a>
               </li>
 
               <li>
-                <a class="bar-icons" href="/admin/all-customer"><i class="pe-7s-id"></i><span>{{$language[4][Auth::guard('admin')->user()->lang]}}</span></a>
-                <!-- <ul class="iconbar-mainmenu custom-scrollbar">
-                  <li class="iconbar-header">{{$language[4][Auth::guard('admin')->user()->lang]}}</li>
-
-                  <li class="all-customer"><a class="all-customer" href="/admin/all-customer">{{$language[28][Auth::guard('admin')->user()->lang]}}</a></li>
-                  
-                </ul> -->
+                <a class="bar-icons" href="/admin/all-customer"><i class="pe-7s-id"></i><span>{{$language[2][Auth::guard('admin')->user()->lang]}}</span></a>
               </li>
 
 
               <li>
-                <a class="bar-icons" href="/admin/post-ads"><i class="pe-7s-id"></i><span>{{$language[5][Auth::guard('admin')->user()->lang]}}</span></a>
-                <!-- <ul class="iconbar-mainmenu custom-scrollbar">
-                  <li class="iconbar-header">{{$language[5][Auth::guard('admin')->user()->lang]}}</li>
-
-                  <li class="post-ads"><a class="post-ads" href="/admin/post-ads">{{$language[7][Auth::guard('admin')->user()->lang]}}</a></li>
-                 
-                </ul> -->
+                <a class="bar-icons" href="/admin/post-ads"><i class="pe-7s-id"></i><span>{{$language[3][Auth::guard('admin')->user()->lang]}}</span></a>
               </li>
 
               <li>
-                <a class="bar-icons" href="/admin/chat-customer"><i style="font-size:22px; vertical-align:middle;color:#242934;font-weight:600;" data-feather="message-circle"></i><span>Chat Customer</span></a>
+                <a class="bar-icons" href="/admin/chat-customer"><i style="font-size:22px; vertical-align:middle;color:#242934;font-weight:600;" data-feather="message-circle"></i><span>{{$language[4][Auth::guard('admin')->user()->lang]}}</span></a>
               </li>
             
               <li>              
-                <a class="bar-icons" href="javascript:void(0)"><i class="pe-7s-graph3"></i><span>{{$language[42][Auth::guard('admin')->user()->lang]}} </span></a>
+                <a class="bar-icons" href="javascript:void(0)"><i class="pe-7s-graph3"></i><span>{{$language[5][Auth::guard('admin')->user()->lang]}} </span></a>
                 <ul class="iconbar-mainmenu custom-scrollbar">
-                  <li class="iconbar-header">{{$language[42][Auth::guard('admin')->user()->lang]}}</li>
 
-                  <!-- <li class="package-report"><a class="package-report" href="/admin/package-report">{{$language[30][Auth::guard('admin')->user()->lang]}} </a></li>  -->
+                  <li class="iconbar-header">{{$language[5][Auth::guard('admin')->user()->lang]}}</li>
 
-                  <li class="visitor-logs"><a class="visitor-logs" href="/admin/visitor-logs">{{$language[31][Auth::guard('admin')->user()->lang]}} </a></li> 
+                  <li class="visitor-logs"><a class="visitor-logs" href="/admin/visitor-logs">{{$language[6][Auth::guard('admin')->user()->lang]}} </a></li> 
 
-                  <li class="user-logs"><a class="user-logs" href="/admin/user-logs">{{$language[32][Auth::guard('admin')->user()->lang]}} </a></li> 
+                  <li class="user-logs"><a class="user-logs" href="/admin/user-logs">{{$language[7][Auth::guard('admin')->user()->lang]}} </a></li> 
                   
                 </ul>
               </li>
 
               <li>
-                <a class="bar-icons" href="javascript:void(0)"><i class="pe-7s-config"></i><span>{{$language[9][Auth::guard('admin')->user()->lang]}}</span></a>
+                <a class="bar-icons" href="javascript:void(0)"><i class="pe-7s-config"></i><span>{{$language[8][Auth::guard('admin')->user()->lang]}}</span></a>
                 <ul class="iconbar-mainmenu custom-scrollbar">
-                  <li class="iconbar-header">{{$language[9][Auth::guard('admin')->user()->lang]}}</li>
+                  <li class="iconbar-header">{{$language[8][Auth::guard('admin')->user()->lang]}}</li>
 
-                  <!-- <li class="trending-today"><a class="trending-today" href="/admin/trending-today">{{$language[10][Auth::guard('admin')->user()->lang]}}</a></li> -->
+                  <li class="category"><a class="category" href="/admin/category">{{$language[9][Auth::guard('admin')->user()->lang]}}</a></li>
 
-                  <li class="category"><a class="category" href="/admin/category">{{$language[11][Auth::guard('admin')->user()->lang]}}</a></li>
+                  <li class="city"><a class="city" href="/admin/city">{{$language[10][Auth::guard('admin')->user()->lang]}}</a></li>
 
-                  <!-- <li class="report-category"><a class="report-category" href="/admin/report-category">{{$language[12][Auth::guard('admin')->user()->lang]}}</a></li> -->
+                  <li class="settings"><a class="settings" href="/admin/settings">{{$language[11][Auth::guard('admin')->user()->lang]}}</a></li>
 
-                  <!-- <li class="package"><a class="package" href="/admin/package">{{$language[13][Auth::guard('admin')->user()->lang]}}</a></li> -->
+                  <li class="google-ads"><a class="google-ads" href="/admin/google-ads">{{$language[12][Auth::guard('admin')->user()->lang]}}</a></li>
 
-                  <li class="city"><a class="city" href="/admin/city">{{$language[14][Auth::guard('admin')->user()->lang]}}</a></li>
+                  <li class="sms-api"><a class="sms-api" href="/admin/sms-api">{{$language[13][Auth::guard('admin')->user()->lang]}}</a></li>
 
-                  <li class="settings"><a class="settings" href="/admin/settings">{{$language[9][Auth::guard('admin')->user()->lang]}}</a></li>
+                  <li class="blog"><a class="blog" href="/admin/blog">{{$language[14][Auth::guard('admin')->user()->lang]}}</a></li>
 
-                  <li class="google-ads"><a class="google-ads" href="/admin/google-ads">Ads Image</a></li>
+                  <li class="newsletter"><a class="newsletter" href="/admin/newsletter">{{$language[15][Auth::guard('admin')->user()->lang]}}</a></li>
 
-                  <li class="sms-api"><a class="sms-api" href="/admin/sms-api">SMS Gateway Details</a></li>
-
-                  <li class="blog"><a class="blog" href="/admin/blog">{{$language[33][Auth::guard('admin')->user()->lang]}}</a></li>
-
-                  <li class="newsletter"><a class="newsletter" href="/admin/newsletter">{{$language[34][Auth::guard('admin')->user()->lang]}}</a></li>
-
-                  <!-- <li class="homepage-seo"><a class="homepage-seo" href="/admin/homepage-seo">SEO Metatag</a></li> -->
-
-                  <li class="languages"><a class="languages" href="/admin/languages">{{$language[15][Auth::guard('admin')->user()->lang]}}</a></li>
+                  <li class="languages"><a class="languages" href="/admin/languages">{{$language[16][Auth::guard('admin')->user()->lang]}}</a></li>
 
                 </ul>
               </li>
 
               <li>
-                <a class="bar-icons" href="javascript:void(0)"><i class="pe-7s-config"></i><span>{{$language[16][Auth::guard('admin')->user()->lang]}}</span></a>
+                <a class="bar-icons" href="javascript:void(0)"><i class="pe-7s-config"></i><span>{{$language[17][Auth::guard('admin')->user()->lang]}}</span></a>
                 <ul class="iconbar-mainmenu custom-scrollbar">
-                  <li class="iconbar-header">{{$language[16][Auth::guard('admin')->user()->lang]}}</li>
-
-                  <!-- <li class="about-us"><a class="about-us" href="/admin/about-us">{{$language[17][Auth::guard('admin')->user()->lang]}}</a></li> -->
+                  <li class="iconbar-header">{{$language[17][Auth::guard('admin')->user()->lang]}}</li>
 
                   <li class="terms-and-conditions"><a class="terms-and-conditions" href="/admin/terms-and-conditions">{{$language[18][Auth::guard('admin')->user()->lang]}}</a></li>
 
                   <li class="how-it-works"><a class="how-it-works" href="/admin/how-it-works">{{$language[19][Auth::guard('admin')->user()->lang]}}</a></li>
 
-                  <!-- <li class="privacy-policy"><a class="privacy-policy" href="/admin/privacy-policy">{{$language[20][Auth::guard('admin')->user()->lang]}}</a></li> -->
 
-                  <li class="our-story"><a class="our-story" href="/admin/our-story">{{$language[21][Auth::guard('admin')->user()->lang]}}</a></li>
+                  <li class="our-story"><a class="our-story" href="/admin/our-story">{{$language[20][Auth::guard('admin')->user()->lang]}}</a></li>
 
-                  <!-- <li class="careers"><a class="careers" href="/admin/careers">{{$language[22][Auth::guard('admin')->user()->lang]}}</a></li> -->
+                  <li class="auto-dealerships"><a class="auto-dealerships" href="/admin/auto-dealerships">{{$language[21][Auth::guard('admin')->user()->lang]}}</a></li>
 
-                  <li class="auto-dealerships"><a class="auto-dealerships" href="/admin/auto-dealerships">{{$language[23][Auth::guard('admin')->user()->lang]}}</a></li>
+                  <li class="trust-saftey"><a class="trust-saftey" href="/admin/trust-saftey">{{$language[22][Auth::guard('admin')->user()->lang]}}</a></li>
 
-                  <li class="trust-saftey"><a class="trust-saftey" href="/admin/trust-saftey">{{$language[24][Auth::guard('admin')->user()->lang]}}</a></li>
+                  <li class="community"><a class="community" href="/admin/community">{{$language[23][Auth::guard('admin')->user()->lang]}}</a></li>
 
-                  <li class="community"><a class="community" href="/admin/community">{{$language[25][Auth::guard('admin')->user()->lang]}}</a></li>
-
-                  <li class="faq"><a class="faq" href="/admin/faq">{{$language[36][Auth::guard('admin')->user()->lang]}}</a></li>
-
-                  <!-- <li class="press"><a class="press" href="/admin/press">{{$language[26][Auth::guard('admin')->user()->lang]}}</a></li>
-
-                  <li class="help"><a class="help" href="/admin/help">{{$language[27][Auth::guard('admin')->user()->lang]}}</a></li> -->
+                  <li class="faq"><a class="faq" href="/admin/faq">{{$language[24][Auth::guard('admin')->user()->lang]}}</a></li>
 
                 </ul>
               </li>

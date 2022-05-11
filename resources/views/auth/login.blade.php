@@ -173,9 +173,9 @@
         <div class="user-form-banner">
             <div class="user-form-content"><a href="#"><img src="/website/images/logo.png" alt="logo"></a>
                 <!-- <h1>Advertise your assets <span>Buy what are you needs.</span></h1> -->
-                <h1>{{$language[169][session()->get('lang')]}}!</h1>
+                <h1>{{$language[175][session()->get('lang')]}}!</h1>
                 <!-- <h1 style="color:#00a7ff">{{$language[170][session()->get('lang')]}}!<span>{{$language[171][session()->get('lang')]}}!</span></h1> -->
-                <p>{{$language[172][session()->get('lang')]}}!</p>
+                <p>{{$language[176][session()->get('lang')]}}!</p>
             </div>
         </div>
         <div class="user-form-category">
@@ -183,21 +183,21 @@
                         class="fas fa-arrow-left"></i></a></div>
             <div class="user-form-category-btn">
                 <ul class="nav nav-tabs">
-                    <li><a href="#login-tab" class="nav-link active" data-toggle="tab">{{$language[173][session()->get('lang')]}}</a></li>
-                    <li><a href="#register-tab" class="nav-link" data-toggle="tab">{{$language[174][session()->get('lang')]}}</a></li>
+                    <li><a href="#login-tab" class="nav-link active" data-toggle="tab">{{$language[177][session()->get('lang')]}}</a></li>
+                    <li><a href="#register-tab" class="nav-link" data-toggle="tab">{{$language[178][session()->get('lang')]}}</a></li>
                 </ul>
             </div>
             <div class="tab-pane active" id="login-tab">
                 <div class="user-form-title">
-                    <h2>{{$language[175][session()->get('lang')]}}!</h2>
-                    <p>{{$language[176][session()->get('lang')]}}.</p>
+                    <h2>{{$language[179][session()->get('lang')]}}!</h2>
+                    <p>{{$language[180][session()->get('lang')]}}.</p>
                 </div>
                 <form method="POST" action="{{ route('login') }}">
                 @csrf
                     <div class="row">
                         <div class="col-12">
                             <div class="form-group">
-                                <input autocomplete="off" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="{{$language[177][session()->get('lang')]}}">
+                                <input autocomplete="off" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="{{$language[181][session()->get('lang')]}}">
                                 <!-- <small class="form-alert">Please follow this example -  mail@mail.com</small> -->
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
@@ -208,7 +208,7 @@
                         </div>
                         <div class="col-12">
                             <div class="form-group">
-                                <input required autocomplete="off" type="password" class="form-control @error('password') is-invalid @enderror" name="password" placeholder="{{$language[178][session()->get('lang')]}}">
+                                <input required autocomplete="off" type="password" class="form-control @error('password') is-invalid @enderror" name="password" placeholder="{{$language[182][session()->get('lang')]}}">
                                 <button onclick="if (password.type == 'text') password.type = 'password'; else password.type = 'text';" type="button" class="form-icon"><i class="eye fas fa-eye"></i></button>
                                 <!-- <small class="form-alert">Password must be 6 characters</small> -->
                                 @error('password')
@@ -221,16 +221,16 @@
                         <div class="col-6">
                             <div class="form-group">
                                 <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}class="custom-control-input"><label class="custom-control-label" for="remember">{{$language[179][session()->get('lang')]}}</label>
+                                    <input type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}class="custom-control-input"><label class="custom-control-label" for="remember">{{$language[183][session()->get('lang')]}}</label>
                                 </div>
                             </div>
                         </div>
                         <div class="col-6">
-                            <div class="form-group text-right"><a href="{{ route('password.request') }}" class="form-forgot">{{$language[180][session()->get('lang')]}}?</a>
+                            <div class="form-group text-right"><a href="{{ route('password.request') }}" class="form-forgot">{{$language[184][session()->get('lang')]}}?</a>
                             </div>
                         </div>
                         <div class="col-12">
-                            <div class="form-group"><button type="submit" class="btn btn-inline"><i class="fas fa-unlock"></i><span>{{$language[181][session()->get('lang')]}}</span></button></div>
+                            <div class="form-group"><button type="submit" class="btn btn-inline"><i class="fas fa-unlock"></i><span>{{$language[185][session()->get('lang')]}}</span></button></div>
                         </div>
                     </div>
                 </form>
@@ -242,17 +242,17 @@
                 <form method="POST" id="signup_form">
                 {{csrf_field()}}
                 <div class="user-form-title">
-                    <h2>{{$language[183][session()->get('lang')]}}</h2>
-                    <p>{{$language[184][session()->get('lang')]}}.</p>
+                    <h2>{{$language[186][session()->get('lang')]}}</h2>
+                    <p>{{$language[187][session()->get('lang')]}}.</p>
                 </div>
-                <p class="text-center" style=" color: #323539; font-weight: 800; letter-spacing: 2px;">{{$language[185][session()->get('lang')]}}</p>
+                <p class="text-center" style=" color: #323539; font-weight: 800; letter-spacing: 2px;">{{$language[188][session()->get('lang')]}}</p>
                 <div class="inputGroup">
                     <input value="0" checked id="business_type1" name="business_type" type="radio"/>
-                    <label for="business_type1">{{$language[186][session()->get('lang')]}}</label>
+                    <label for="business_type1">{{$language[189][session()->get('lang')]}}</label>
                 </div>
                 <div class="inputGroup">
                     <input value="1" id="business_type2" name="business_type" type="radio"/>
-                    <label for="business_type2">{{$language[187][session()->get('lang')]}}</label>
+                    <label for="business_type2">{{$language[190][session()->get('lang')]}}</label>
                 </div>
                 <!-- <ul class="user-form-option">
                     <li><a href="#"><i class="fab fa-facebook-f"></i><span>facebook</span></a></li>
@@ -266,26 +266,26 @@
                         <br>
                         <div class="col-12">
                             <div class="form-group">
-                                <input autocomplete="off" name="email" id="email" type="email" class="form-control" placeholder="{{$language[177][session()->get('lang')]}}">
+                                <input autocomplete="off" name="email" id="email" type="email" class="form-control" placeholder="{{$language[191][session()->get('lang')]}}">
                                 <!-- <small class="form-alert">Please follow this example - mail@mail.com</small> -->
                             </div>
                         </div>
                         <div class="col-12">
                             <div class="form-group">
-                                <input autocomplete="off" name="mobile" id="mobile" type="number" class="form-control" placeholder="{{$language[188][session()->get('lang')]}}">
+                                <input autocomplete="off" name="mobile" id="mobile" type="number" class="form-control" placeholder="{{$language[192][session()->get('lang')]}}">
                                 <!-- <small class="form-alert">Please follow this example - 1XXXXXXXX</small> -->
                             </div>
                         </div>
                         <div class="col-12">
                             <div class="form-group">
-                                <input autocomplete="off" name="password" id="password" type="password" class="form-control" placeholder="{{$language[178][session()->get('lang')]}}">
+                                <input autocomplete="off" name="password" id="password" type="password" class="form-control" placeholder="{{$language[193][session()->get('lang')]}}">
                                 <button onclick="if (password.type == 'text') password.type = 'password'; else password.type = 'text';" type="button" class="form-icon"><i class="eye fas fa-eye"></i></button>
                                 <!-- <small class="form-alert">Password must be 6 characters</small> -->
                             </div>
                         </div>
                         <div class="col-12">
                             <div class="form-group">
-                                <input name="password_confirmation" id="password_confirmation" autocomplete="off" type="password" class="form-control" placeholder="{{$language[189][session()->get('lang')]}}">
+                                <input name="password_confirmation" id="password_confirmation" autocomplete="off" type="password" class="form-control" placeholder="{{$language[194][session()->get('lang')]}}">
                                 <button onclick="if (password_confirmation.type == 'text') password_confirmation.type = 'password'; else password_confirmation.type = 'text';" type="button" class="form-icon"><i class="eye fas fa-eye"></i></button>
                                 <!-- <small class="form-alert">Password must be 6 characters</small> -->
                             </div>
@@ -294,13 +294,13 @@
                             <div class="form-group">
                                 <div class="custom-control custom-checkbox">
                                     <input name="terms_and_condition" type="checkbox" class="custom-control-input" id="terms_and_condition">
-                                    <label class="custom-control-label" for="terms_and_condition"><a href="#">{{$language[190][session()->get('lang')]}}.</a></label>
+                                    <label class="custom-control-label" for="terms_and_condition"><a href="#">{{$language[195][session()->get('lang')]}}.</a></label>
                                 </div>
                             </div>
                         </div>
                         <div class="col-12">
                             <div class="form-group">
-                                <button id="save" onclick="Save()" type="button" class="btn btn-inline"><i class="fas fa-user-check"></i><span>{{$language[191][session()->get('lang')]}}</span></button>
+                                <button id="save" onclick="Save()" type="button" class="btn btn-inline"><i class="fas fa-user-check"></i><span>{{$language[196][session()->get('lang')]}}</span></button>
                             </div>
                         </div>
                     </div>

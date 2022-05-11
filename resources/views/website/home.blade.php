@@ -57,7 +57,7 @@
 <section class="banner-part">
         <div class="container">
             <div class="banner-content">
-                <h1>{{$language[55][session()->get('lang')]}}!</h1>
+                <h1>{{$language[138][session()->get('lang')]}}!</h1>
                <!--  <p>The best place to find everything in the UAE | Classifieds | Ads. Currently it says Found iT</p><a href="leftbar-list.html" class="btn btn-outline"><i
                         class="fas fa-eye"></i><span>Show all ads</span></a> -->
 
@@ -78,14 +78,14 @@
                 <!-- <form class="banner-search"> -->
                     <div class="banner-main-search">
                         <div class="col-lg-10 col-md-9 col-sm-12 p-0 marcus">
-                            <input autocomplete="off" name="search" id="search" type="text" class="form-control" placeholder="{{$language[58][session()->get('lang')]}}?">
+                            <input autocomplete="off" name="search" id="search" type="text" class="form-control" placeholder="{{$language[139][session()->get('lang')]}}?">
                             <button type="button" class="banner-option-btn tooltip">
                             <i class="fas fa-sliders-h"></i>
                             <span class="tooltext left">FilterOption</span></button>
                         </div>
                     </div>
                     <div class="col-lg-2 col-md-3 col-sm-12 p-0 text-left marcus">
-                        <button onclick="SearchPost1()" type="button" class="btn btn-inline home-search">{{$language[56][session()->get('lang')]}}</button>
+                        <button onclick="SearchPost1()" type="button" class="btn btn-inline home-search">{{$language[121][session()->get('lang')]}}</button>
                     </div>
 
                     <div class="banner-search-option" style="display: none;">
@@ -93,7 +93,7 @@
                             <div class="col-12">
                                 <div class="form-group">
                                     <select name="city" id="city" class="form-control custom-select">
-                                        <option value="">{{$language[62][session()->get('lang')]}}*</option>
+                                        <option value="">{{$language[118][session()->get('lang')]}}*</option>
                                         @foreach($city as $row)
                                         <option value="{{$row->id}}">{{$row->city}}</option>
                                         @endforeach
@@ -103,7 +103,7 @@
                             <div class="col-6">
                                 <div class="form-group">
                                     <select name="category" id="category" class="form-control custom-select">
-                                        <option value="">{{$language[63][session()->get('lang')]}}(s)*</option>
+                                        <option value="">{{$language[119][session()->get('lang')]}}(s)*</option>
                                         @foreach($category as $row)
                                         <option value="{{$row->id}}">{{$row->category}}</option>
                                         @endforeach
@@ -113,7 +113,7 @@
                             <div class="col-6">
                                 <div class="form-group">
                                     <select name="subcategory" id="subcategory" class="form-control custom-select">
-                                        <option value="">{{$language[64][session()->get('lang')]}}(s)*</option>
+                                        <option value="">{{$language[120][session()->get('lang')]}}(s)*</option>
                                         @foreach($subcategory as $row)
                                         <option value="{{$row->id}}">{{$row->category}}</option>
                                         @endforeach
@@ -122,7 +122,7 @@
                             </div>
                             <div class="col-12">
                                 <div class="form-btn">
-                                    <button onclick="SearchPost1()" type="button" class="btn btn-inline"><i class="fas fa-search"></i><span>{{$language[56][session()->get('lang')]}}</span></button>
+                                    <button onclick="SearchPost1()" type="button" class="btn btn-inline"><i class="fas fa-search"></i><span>{{$language[121][session()->get('lang')]}}</span></button>
                                 </div>
                             </div>
                         </div>
@@ -234,7 +234,7 @@
 
 <div class="row">
    <div class="col-lg-12">
-      <div class="center-20"><a href="/category-list" class="btn btn-inline"><i class="fas fa-eye"></i><span>{{$language[101][session()->get('lang')]}}</span></a>
+      <div class="center-20"><a href="/category-list" class="btn btn-inline"><i class="fas fa-eye"></i><span>{{$language[140][session()->get('lang')]}}</span></a>
       </div>
    </div>
 </div>
@@ -261,8 +261,8 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-center-heading">
-                        <h2>{{$language[48][session()->get('lang')]}}</h2>
-                        <p>{{$language[193][session()->get('lang')]}}</p>
+                        <h2>{{$language[141][session()->get('lang')]}}</h2>
+                        <p>{{$language[142][session()->get('lang')]}}</p>
                     </div>
                 </div>
             </div>
@@ -417,10 +417,10 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-center-heading">
-                        <h2>{{$language[49][session()->get('lang')]}} 
+                        <h2>{{$language[143][session()->get('lang')]}} 
                             <!-- <span>Ads</span> -->
                         </h2>
-                        <p>{{$language[194][session()->get('lang')]}}</p>
+                        <p>{{$language[144][session()->get('lang')]}}</p>
                     </div>
                 </div>
             </div>
@@ -3320,8 +3320,8 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-center-heading">
-                        <h2>{{$language[50][session()->get('lang')]}}</h2>
-                        <p>{{$language[195][session()->get('lang')]}}</p>
+                        <h2>{{$language[145][session()->get('lang')]}}</h2>
+                        <p>{{$language[146][session()->get('lang')]}}</p>
                     </div>
                 </div>
             </div>

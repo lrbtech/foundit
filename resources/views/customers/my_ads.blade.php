@@ -8,10 +8,10 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="single-content">
-                        <h2>{{$language[124][session()->get('lang')]}}</h2>
+                        <h2>{{$language[94][session()->get('lang')]}}</h2>
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="/">{{$language[60][session()->get('lang')]}}</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">{{$language[124][session()->get('lang')]}}</li>
+                            <li class="breadcrumb-item"><a href="/">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">{{$language[94][session()->get('lang')]}}</li>
                         </ol>
                     </div>
                 </div>
@@ -154,7 +154,7 @@
                         <div class="col-md-6 col-lg-12">
                             <div class="product-sidebar">
                                 <div class="product-sidebar-title">
-                                    <h6>{{$language[78][session()->get('lang')]}}</h6>
+                                    <h6>{{$language[95][session()->get('lang')]}}</h6>
                                 </div>
                                 <div class="product-sidebar-content">
                                     <!-- <div class="product-sidebar-search">
@@ -207,7 +207,7 @@
                         <div class="col-md-6 col-lg-12">
                             <div class="product-sidebar">
                                 <div class="product-sidebar-title">
-                                    <h6>{{$language[79][session()->get('lang')]}}</h6>
+                                    <h6>{{$language[96][session()->get('lang')]}}</h6>
                                 </div>
                                 <div class="product-sidebar-content">
                                     <!-- <div class="product-sidebar-search"><input type="text" placeholder="Search"></div> -->

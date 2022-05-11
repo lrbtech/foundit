@@ -21,7 +21,7 @@
                     <div class="single-content">
                         <h2>{{$language[13][session()->get('lang')]}}</h2>
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="/">{{$language[60][session()->get('lang')]}}</a></li>
+                            <li class="breadcrumb-item"><a href="/">Home</a></li>
                             <li class="breadcrumb-item active" aria-current="page">{{$language[13][session()->get('lang')]}}</li>
                         </ol>
                     </div>

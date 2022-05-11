@@ -19,10 +19,10 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="single-content">
-                        <h2>{{$language[74][session()->get('lang')]}}</h2>
+                        <h2>{{$language[134][session()->get('lang')]}}</h2>
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="/">{{$language[60][session()->get('lang')]}}</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">{{$language[74][session()->get('lang')]}}</li>
+                            <li class="breadcrumb-item"><a href="/">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">{{$language[134][session()->get('lang')]}}</li>
                         </ol>
                     </div>
                 </div>
@@ -34,19 +34,19 @@
             <div class="row">
                 <div class="col-lg-4">
                     <div class="contact-info"><i class="fas fa-map-marker-alt"></i>
-                        <h3>{{$language[71][session()->get('lang')]}}</h3>
+                        <h3>{{$language[147][session()->get('lang')]}}</h3>
                         <p>{{$settings->address}}</p>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="contact-info"><i class="fas fa-phone-alt"></i>
-                        <h3>{{$language[72][session()->get('lang')]}}</h3>
+                        <h3>{{$language[148][session()->get('lang')]}}</h3>
                         <p>{{$settings->landline}} <span>{{$settings->mobile}}</span></p>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="contact-info"><i class="fas fa-envelope"></i>
-                        <h3>{{$language[73][session()->get('lang')]}}</h3>
+                        <h3>{{$language[149][session()->get('lang')]}}</h3>
                         <p>{{$settings->email}} <span>{{$settings->other_email}}</span></p>
                     </div>
                 </div>

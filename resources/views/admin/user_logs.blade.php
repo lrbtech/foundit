@@ -11,7 +11,7 @@
             <div class="page-header">
               <div class="row">
                 <div class="col-lg-6 main-header">
-                  <h2>{{$language[32][Auth::guard('admin')->user()->lang]}}</h2>
+                  <h2>{{$language[39][Auth::guard('admin')->user()->lang]}}</h2>
                   <h6 class="mb-0">{{$language[0][Auth::guard('admin')->user()->lang]}}</h6>
                 </div>
                 <!-- <div class="col-lg-6 breadcrumb-right">     

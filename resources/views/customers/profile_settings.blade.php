@@ -8,10 +8,10 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="single-content">
-                        <h2>{{$language[126][session()->get('lang')]}}</h2>
+                        <h2>{{$language[97][session()->get('lang')]}}</h2>
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="/">{{$language[60][session()->get('lang')]}}</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">{{$language[126][session()->get('lang')]}}</li>
+                            <li class="breadcrumb-item"><a href="/">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">{{$language[97][session()->get('lang')]}}</li>
                         </ol>
                     </div>
                 </div>
@@ -25,7 +25,7 @@
                 <div class="col-lg-12">
                     <div class="account-card alert fade show">
                         <div class="account-title">
-                            <h3>{{$language[133][session()->get('lang')]}}</h3><button data-dismiss="alert">close</button>
+                            <h3>{{$language[98][session()->get('lang')]}}</h3><button data-dismiss="alert">close</button>
                         </div>
                         <form class="setting-form" action="#" id="form" method="POST" enctype="multipart/form-data">
                         {{ csrf_field() }}
@@ -33,71 +33,71 @@
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="form-group">
-                                        <label class="form-label">{{$language[134][session()->get('lang')]}}</label>
-                                        <input autocomplete="off" name="first_name" id="first_name" value="{{$user->first_name}}" type="text" class="form-control" placeholder="{{$language[134][session()->get('lang')]}}">
+                                        <label class="form-label">{{$language[99][session()->get('lang')]}}</label>
+                                        <input autocomplete="off" name="first_name" id="first_name" value="{{$user->first_name}}" type="text" class="form-control" placeholder="{{$language[99][session()->get('lang')]}}">
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="form-group">
-                                        <label class="form-label">{{$language[135][session()->get('lang')]}}</label>
-                                        <input autocomplete="off" name="last_name" id="last_name" value="{{$user->last_name}}" type="text" class="form-control" placeholder="{{$language[135][session()->get('lang')]}}"></div>
+                                        <label class="form-label">{{$language[100][session()->get('lang')]}}</label>
+                                        <input autocomplete="off" name="last_name" id="last_name" value="{{$user->last_name}}" type="text" class="form-control" placeholder="{{$language[100][session()->get('lang')]}}"></div>
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="form-group">
-                                        <label class="form-label">{{$language[121][session()->get('lang')]}}</label>
-                                        <input autocomplete="off" name="company" id="company" value="{{$user->company}}" type="text" class="form-control" placeholder="{{$language[121][session()->get('lang')]}}"></div>
+                                        <label class="form-label">{{$language[101][session()->get('lang')]}}</label>
+                                        <input autocomplete="off" name="company" id="company" value="{{$user->company}}" type="text" class="form-control" placeholder="{{$language[101][session()->get('lang')]}}"></div>
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="form-group">
-                                        <label class="form-label">{{$language[137][session()->get('lang')]}}</label>
-                                        <input autocomplete="off" name="address" id="address" value="{{$user->address}}" type="text" class="form-control" placeholder="{{$language[137][session()->get('lang')]}}">
+                                        <label class="form-label">{{$language[102][session()->get('lang')]}}</label>
+                                        <input autocomplete="off" name="address" id="address" value="{{$user->address}}" type="text" class="form-control" placeholder="{{$language[102][session()->get('lang')]}}">
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="form-group">
-                                        <label class="form-label">{{$language[138][session()->get('lang')]}}</label>
-                                        <input autocomplete="off" name="city" id="city" value="{{$user->city}}" type="text" class="form-control" placeholder="{{$language[138][session()->get('lang')]}}">
+                                        <label class="form-label">{{$language[103][session()->get('lang')]}}</label>
+                                        <input autocomplete="off" name="city" id="city" value="{{$user->city}}" type="text" class="form-control" placeholder="{{$language[103][session()->get('lang')]}}">
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="form-group">
-                                        <label class="form-label">{{$language[139][session()->get('lang')]}}</label>
-                                        <input autocomplete="off" name="state" id="state" value="{{$user->state}}" type="text" class="form-control" placeholder="{{$language[139][session()->get('lang')]}}">
+                                        <label class="form-label">{{$language[104][session()->get('lang')]}}</label>
+                                        <input autocomplete="off" name="state" id="state" value="{{$user->state}}" type="text" class="form-control" placeholder="{{$language[104][session()->get('lang')]}}">
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="form-group">
-                                        <label class="form-label">{{$language[140][session()->get('lang')]}}</label>
-                                        <input autocomplete="off" name="postal_code" id="postal_code" value="{{$user->postal_code}}" type="text" class="form-control" placeholder="{{$language[140][session()->get('lang')]}}">
+                                        <label class="form-label">{{$language[105][session()->get('lang')]}}</label>
+                                        <input autocomplete="off" name="postal_code" id="postal_code" value="{{$user->postal_code}}" type="text" class="form-control" placeholder="{{$language[105][session()->get('lang')]}}">
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="form-group">
-                                        <label class="form-label">{{$language[119][session()->get('lang')]}}</label>
-                                        <input autocomplete="off" readonly name="email" id="email" value="{{$user->email}}" type="email" class="form-control" placeholder="{{$language[119][session()->get('lang')]}}">
+                                        <label class="form-label">{{$language[106][session()->get('lang')]}}</label>
+                                        <input autocomplete="off" readonly name="email" id="email" value="{{$user->email}}" type="email" class="form-control" placeholder="{{$language[106][session()->get('lang')]}}">
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="form-group">
-                                        <label class="form-label">{{$language[118][session()->get('lang')]}}</label>
-                                        <input autocomplete="off" name="website" id="website" value="{{$user->website}}" type="text" class="form-control" placeholder="{{$language[118][session()->get('lang')]}}">
+                                        <label class="form-label">{{$language[107][session()->get('lang')]}}</label>
+                                        <input autocomplete="off" name="website" id="website" value="{{$user->website}}" type="text" class="form-control" placeholder="{{$language[107][session()->get('lang')]}}">
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="form-group">
-                                        <label class="form-label">{{$language[120][session()->get('lang')]}}</label>
-                                        <input autocomplete="off" name="mobile" id="mobile" value="{{$user->mobile}}" type="text" class="form-control" placeholder="{{$language[120][session()->get('lang')]}}">
+                                        <label class="form-label">{{$language[108][session()->get('lang')]}}</label>
+                                        <input autocomplete="off" name="mobile" id="mobile" value="{{$user->mobile}}" type="text" class="form-control" placeholder="{{$language[109][session()->get('lang')]}}">
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="form-group">
-                                        <label class="form-label">{{$language[136][session()->get('lang')]}}</label>
+                                        <label class="form-label">{{$language[110][session()->get('lang')]}}</label>
                                         <input autocomplete="off" name="dob" id="dob" value="{{$user->dob}}" type="date" class="form-control">
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="form-group">
-                                        <label class="form-label">{{$language[141][session()->get('lang')]}}</label>
+                                        <label class="form-label">{{$language[111][session()->get('lang')]}}</label>
                                         <select name="gender" id="gender" class="form-control custom-select">
                                             <option {{ ($user->gender == 'male' ? ' selected' : '') }} value="male">male</option>
                                             <option {{ ($user->gender == 'female' ? ' selected' : '') }} value="female">female</option>
@@ -106,21 +106,21 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="form-group">
-                                        <label class="form-label">{{$language[142][session()->get('lang')]}}</label>
+                                        <label class="form-label">{{$language[112][session()->get('lang')]}}</label>
                                         <input name="profile_image" id="profile_image" type="file" class="form-control">
                                         <img style="width: 150px;" src="/upload_profile_image/{{$user->profile_image}}">
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="form-group">
-                                        <label class="form-label">{{$language[143][session()->get('lang')]}}</label>
+                                        <label class="form-label">{{$language[113][session()->get('lang')]}}</label>
                                         <input name="banner_image" id="banner_image" type="file" class="form-control">
                                         <img style="width: 150px;" src="/upload_profile_image/{{$user->banner_image}}">
                                     </div>
                                 </div>
                                 <div class="col-lg-12">
                                     <button type="button" onclick="Save()" class="btn btn-inline">
-                                        <i class="fas fa-user-check"></i><span>{{$language[144][session()->get('lang')]}}</span>
+                                        <i class="fas fa-user-check"></i><span>Update Profile</span>
                                     </button>
                                 </div>
                             </div>

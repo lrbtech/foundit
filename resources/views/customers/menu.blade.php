@@ -24,15 +24,15 @@
                     <div class="dash-header-right">
                         <div class="dash-focus dash-list">
                             <h2>{{$post_ads_count}}</h2>
-                            <p>{{$language[104][session()->get('lang')]}}</p>
+                            <p>{{$language[64][session()->get('lang')]}}</p>
                         </div>
                         <div class="dash-focus dash-book">
                             <h2>{{$bookmark_count}}</h2>
-                            <p>{{$language[103][session()->get('lang')]}}</p>
+                            <p>{{$language[65][session()->get('lang')]}}</p>
                         </div>
                         <div class="dash-focus dash-rev">
                             <h2>{{$reviews_count}}</h2>
-                            <p>{{$language[105][session()->get('lang')]}}</p>
+                            <p>{{$language[66][session()->get('lang')]}}</p>
                         </div>
                     </div>
                 </div>
@@ -51,19 +51,19 @@
                     <div class="dash-menu-list">
                         {{--@if(Auth::user()->package_id != 0)--}}
                         <ul>
-                            <li><a class="dashboard" href="/customer/dashboard">{{$language[3][session()->get('lang')]}}</a></li>
-                            <li><a class="profile" href="/customer/profile">{{$language[122][session()->get('lang')]}}</a></li>
-                            <li><a class="post-ad" href="/customer/create-post-ad">{{$language[123][session()->get('lang')]}}</a></li>
-                            <li><a class="my-ads" href="/customer/my-ads">{{$language[124][session()->get('lang')]}}</a></li>
+                            <li><a class="dashboard" href="/customer/dashboard">{{$language[55][session()->get('lang')]}}</a></li>
+                            <!-- <li><a class="profile" href="/customer/profile">{{$language[56][session()->get('lang')]}}</a></li> -->
+                            <li><a class="post-ad" href="/customer/create-post-ad">{{$language[57][session()->get('lang')]}}</a></li>
+                            <li><a class="my-ads" href="/customer/my-ads">{{$language[58][session()->get('lang')]}}</a></li>
                             <!-- <li><a class="packages" href="/customer/packages">{{$language[125][session()->get('lang')]}}</a></li> -->
-                            <li><a class="settings" href="/customer/settings">{{$language[126][session()->get('lang')]}}</a></li>
-                            <li><a class="bookmark" href="/customer/bookmark">{{$language[127][session()->get('lang')]}}</a></li>
-                            <li><a class="search-history" href="/customer/search-history">Search History</a></li>
-                            <li><a class="chat" href="/customer/message">{{$language[128][session()->get('lang')]}}</a></li>
-                            <li><a class="chat-admin" href="/customer/chat-admin">Talk to Foundit</a></li>
+                            <li><a class="settings" href="/customer/settings">{{$language[59][session()->get('lang')]}}</a></li>
+                            <li><a class="bookmark" href="/customer/bookmark">{{$language[60][session()->get('lang')]}}</a></li>
+                            <li><a class="search-history" href="/customer/search-history">{{$language[61][session()->get('lang')]}}</a></li>
+                            <li><a class="chat" href="/customer/message">{{$language[62][session()->get('lang')]}}</a></li>
+                            <li><a class="chat-admin" href="/customer/chat-admin">{{$language[63][session()->get('lang')]}}</a></li>
                             <li class="nav-item">
                             <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                            <i class="ti-shift-right"></i>{{$language[129][session()->get('lang')]}}</a>
+                            <i class="ti-shift-right"></i>Log Out</a>
                             </li> 
         
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

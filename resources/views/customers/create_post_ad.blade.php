@@ -356,10 +356,10 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="single-content">
-                        <h2>{{$language[123][session()->get('lang')]}}</h2>
+                        <h2>{{$language[74][session()->get('lang')]}}</h2>
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="/">{{$language[60][session()->get('lang')]}}</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">{{$language[123][session()->get('lang')]}}</li>
+                            <li class="breadcrumb-item"><a href="/">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">{{$language[74][session()->get('lang')]}}</li>
                         </ol>
                     </div>
                 </div>
@@ -380,17 +380,17 @@
             <p>{{$language[145][session()->get('lang')]}}</p>
         </div> -->
         <fieldset>
-            <center><h3>{{$language[146][session()->get('lang')]}}</h3></center>
+            <center><h3>{{$language[75][session()->get('lang')]}}</h3></center>
             <div class="row">
                 <div class="col-lg-12">
                     <div class="form-group">
-                        <label class="form-label">{{$language[147][session()->get('lang')]}}</label>
+                        <label class="form-label">{{$language[76][session()->get('lang')]}}</label>
                         <input name="title" id="title" type="text" class="form-control" placeholder="Type your product title here">
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="form-group">
-                        <label class="form-label">{{$language[148][session()->get('lang')]}}</label>
+                        <label class="form-label">{{$language[77][session()->get('lang')]}}</label>
                         <select name="post_type" id="post_type" class="form-control custom-select">
                             <option selected value="0">Normal Post</option>
                         </select>
@@ -398,13 +398,13 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="form-group">
-                        <label class="form-label">{{$language[149][session()->get('lang')]}}</label>
+                        <label class="form-label">{{$language[78][session()->get('lang')]}}</label>
                         <input name="price" id="price" type="number" class="form-control" placeholder="Enter your pricing amount">
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="form-group">
-                        <label class="form-label">{{$language[150][session()->get('lang')]}}</label>
+                        <label class="form-label">{{$language[79][session()->get('lang')]}}</label>
                         <select name="category" id="category" class="form-control custom-select">
                             <option value="">Select Category(s)*</option>
                             @foreach($category as $row)
@@ -415,7 +415,7 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="form-group">
-                        <label class="form-label">{{$language[151][session()->get('lang')]}}</label>
+                        <label class="form-label">{{$language[80][session()->get('lang')]}}</label>
                         <select name="subcategory" id="subcategory" class="form-control custom-select">
                             <option value="">Select Sub Category(s)*</option>
                             @foreach($subcategory as $row)
@@ -428,7 +428,7 @@
                     <div class="form-group">
                         <ul class="form-check-list">
                             <li>
-                                <label class="form-label">{{$language[152][session()->get('lang')]}}</label>
+                                <label class="form-label">{{$language[81][session()->get('lang')]}}</label>
                             </li>
                             <li>
                                 <input value="fixed" type="radio" class="form-check" id="price_condition1" name="price_condition">
@@ -461,7 +461,7 @@
                     <div class="form-group">
                         <ul class="form-check-list">
                             <li>
-                                <label class="form-label">{{$language[153][session()->get('lang')]}}</label>
+                                <label class="form-label">{{$language[82][session()->get('lang')]}}</label>
                             </li>
                             <li>
                                 <input value="used" type="radio" class="form-check" id="item_condition1" name="item_condition">
@@ -478,7 +478,7 @@
                     <div class="form-group">
                         <ul class="form-check-list">
                             <li>
-                                <label class="form-label">{{$language[49][session()->get('lang')]}}</label>
+                                <label class="form-label">{{$language[83][session()->get('lang')]}}</label>
                             </li>
                             <li>
                                 <input value="1" type="checkbox" class="form-check" id="popular_ads1" name="popular_ads">
@@ -501,10 +501,10 @@
                     </div>
                 </div>
             </div>
-            <input type="button" name="next" class="custom_input next action-button" value="{{$language[161][session()->get('lang')]}}" />
+            <input type="button" name="next" class="custom_input next action-button" value="Next" />
         </fieldset>	
         <fieldset>
-            <center><h3>{{$language[154][session()->get('lang')]}}</h3></center>
+            <center><h3>{{$language[85][session()->get('lang')]}}</h3></center>
             <!-- <div class="row"> -->
                 <!-- <div class="col-lg-12">
                     <div class="form-group">
@@ -549,12 +549,12 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="form-group">
-                        <label class="form-label">{{$language[157][session()->get('lang')]}}</label>
+                        <label class="form-label">{{$language[86][session()->get('lang')]}}</label>
                         <textarea autocomplete="off" name="decription" id="description" class="form-control" placeholder="Describe your message"></textarea>
                     </div>
                 </div>
             </div>
-            <input type="button" name="next" class="custom_input next action-button" value="{{$language[161][session()->get('lang')]}}" />
+            <input type="button" name="next" class="custom_input next action-button" value="Next" />
             <button style="float:left;" type="button" class="previous action-button-previous"><i class="fa fa-chevron-left"></i></button>
         </fieldset>	
         <!-- <fieldset>
@@ -570,35 +570,35 @@
             </div>
         </fieldset>	 -->
         <fieldset>
-            <center><h3>{{$language[158][session()->get('lang')]}}</h3></center>
+            <center><h3>{{$language[87][session()->get('lang')]}}</h3></center>
             <div class="row">
                 <div class="col-lg-6">
                     <div class="form-group">
-                        <label class="form-label">{{$language[167][session()->get('lang')]}}</label>
+                        <label class="form-label">{{$language[88][session()->get('lang')]}}</label>
                         <input autocomplete="off" name="name" id="name" type="text" class="form-control" placeholder="Your Name">
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="form-group">
-                        <label class="form-label">{{$language[119][session()->get('lang')]}}</label>
+                        <label class="form-label">{{$language[89][session()->get('lang')]}}</label>
                         <input autocomplete="off" name="email" id="email" type="email" class="form-control" placeholder="Your Email">
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="form-group">
-                        <label class="form-label">{{$language[120][session()->get('lang')]}}</label>
+                        <label class="form-label">{{$language[90][session()->get('lang')]}}</label>
                         <input autocomplete="off" name="mobile" id="mobile" type="number" class="form-control" placeholder="Your Number">
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="form-group">
-                        <label class="form-label">{{$language[137][session()->get('lang')]}}</label>
+                        <label class="form-label">{{$language[91][session()->get('lang')]}}</label>
                         <input autocomplete="off" name="address" id="address" type="text" class="form-control" placeholder="Address">
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="form-group">
-                        <label class="form-label">{{$language[159][session()->get('lang')]}}*</label>
+                        <label class="form-label">{{$language[92][session()->get('lang')]}}*</label>
                         <select name="city" id="city" class="form-control custom-select">
                             <option value="">Select City*</option>
                             @foreach($city as $row)
@@ -609,7 +609,7 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="form-group">
-                        <label class="form-label">{{$language[160][session()->get('lang')]}}*</label>
+                        <label class="form-label">{{$language[93][session()->get('lang')]}}*</label>
                         <select name="area" id="area" class="form-control custom-select">
                             <option value="">Select Area*</option>
                             @foreach($area as $row)
@@ -628,7 +628,7 @@
                     <iframe id="map" src="http://maps.google.com/maps?q=abu dhabi&z=16&output=embed" style="width: 100%; height: 300px;border:0;" frameborder="0" allowfullscreen></iframe>
                 </div>
             </div>
-            <input id="save" onclick="Save()" type="button" class="custom_input action-button" value="{{$language[163][session()->get('lang')]}}" />
+            <input id="save" onclick="Save()" type="button" class="custom_input action-button" value="Published your Ad" />
             <button style="float:left;" type="button" class="previous action-button-previous"><i class="fa fa-chevron-left"></i></button>
         </fieldset>	
     </form>

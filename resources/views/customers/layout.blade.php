@@ -1,28 +1,40 @@
-
 <!DOCTYPE html>
 <!-- <html id="html_open" lang="en" dir="ltr"> -->
 @if(session()->get('lang') == 'english')
-<html lang="en" dir="ltr">
-@else
-<html lang="ar" dir="rtl">
+<html dir="ltr">
+@elseif(session()->get('lang') == 'arabic')
+<html dir="rtl">
+@else 
+<html dir="ltr">
 @endif
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="author" content="LrbInfotech">
     <meta name="title" content="FoundIT - Classified">
-    <meta name="keywords" content="The best place to find everything in the UAE | Classifieds | Ads. Currently it says Found iT">
+    <meta name="keywords" content="The best place to find everything in the UAE | Classifieds | Ads. Currently it says Found iT"> -->
     <title>Foundit.ae - The Best Place To Find Everything In The UAE</title>
     <link rel="icon" href="/website/images/favicon.png">
     <link rel="stylesheet" href="/website/fonts/flaticon/flaticon.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
     <link rel="stylesheet" href="/website/css/vendor/slick.min.css">
     <link rel="stylesheet" href="/website/css/vendor/bootstrap.min.css">
-    <link rel="stylesheet" href="/website/css/custom/main.css">
-    <link rel="stylesheet" href="/website/css/custom/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.rtl.min.css">
+
+@if(session()->get('lang') == 'english')
+<link rel="stylesheet" href="/website/css/custom/main.css">
+<link rel="stylesheet" href="/website/css/custom/index.css">
+@elseif(session()->get('lang') == 'arabic')
+<link rel="stylesheet" href="/website/css/custom/main-rtl.css">
+<link rel="stylesheet" href="/website/css/custom/index-rtl.css">
+@else 
+<link rel="stylesheet" href="/website/css/custom/main.css">
+<link rel="stylesheet" href="/website/css/custom/index.css">
+@endif
     <script src="/sweetalert2/sweetalert2.min.js"></script>
-    <link rel="stylesheet" href="/sweetalert2/sweetalert2.min.css"> 
+    <link rel="stylesheet" href="/sweetalert2/sweetalert2.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" rel="stylesheet" type="text/css" />
     @yield('extra-css')
 <style>
@@ -109,12 +121,47 @@
   border: 1px solid #cc0033;
   outline: none;
 }
+
 .goog-te-banner-frame.skiptranslate {
     display: none !important;
     } 
 body {
     top: 0px !important; 
     }
+@media screen and (max-width: 520px){
+    .news-content h2 {
+    margin-bottom: 15px;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.news-form input {
+    width: 100%;
+    height: 50px;
+}
+.news-form .btn{
+    height: 40px;
+    top: 5px;
+}
+
+.news-form input::-webkit-input-placeholder{
+  font-size: 12px;
+}
+
+.wrap-footer {
+    padding-bottom: 15px;
+}
+
+.footer-part {
+    padding: 35px 0px 50px;
+}
+
+.footer-part .text-danger{
+    font-size: 12px;
+    padding-left: 2px;
+}
+
+}
 
 .new-language span{
     margin-right: 8px;
@@ -130,7 +177,36 @@ body {
     border: none;
 }
 
+/* .single-banner {
+    background: url(/upload_files/{{$settings->header_banner}}) !important;
+} */
+
+.img-box-design{
+    text-align: center;
+}
+
+.img-box-design img{
+    width: unset!important;
+}
+
+@media only screen and (max-width: 1024px) {
+  .left-ad {
+    display:none;
+  }
+  .right-ad {
+    display:none;
+  }
+  /* .center_image{
+    display:none;
+  } */
+}
+@media only screen and (max-width: 768px) {
+  .ad_728_image{
+    width:100% !important;
+  }
+}
 </style>
+
 </head>
 
 <body class="notranslate">
@@ -142,9 +218,9 @@ body {
                         <li><button type="button" class="header-menu"><i class="fas fa-align-left"></i></button></li>
                         <li><a href="/" class="header-logo"><img src="/website/images/logo.png" alt="logo"></a></li>
                         @if(Auth::check())
-                        <li><a href="/customer/dashboard" class="header-user"><i class="fas fa-user"></i><span>{{$language[3][session()->get('lang')]}}</span></a></li>
+                        <li><a href="/customer/dashboard" class="header-user"><i class="fas fa-user"></i><span>{{$language[115][session()->get('lang')]}}</span></a></li>
                         @else 
-                        <li><a href="/login" class="header-user"><i class="fas fa-user"></i><span>{{$language[47][session()->get('lang')]}}</span></a></li>
+                        <li><a href="/login" class="header-user"><i class="fas fa-user"></i><span>{{$language[116][session()->get('lang')]}}</span></a></li>
                         @endif
                         <li><button type="button" class="header-src"><i class="fas fa-search"></i></button></li>
                     </ul>
@@ -153,7 +229,7 @@ body {
                 {{ csrf_field() }}
                     <div class="header-main-search">
                         <button onclick="SearchPost()" type="button" class="header-search-btn"><i class="fas fa-search"></i></button>
-                        <input autocomplete="off" name="search" id="headersearch" type="text" class="form-control" placeholder="{{$language[46][session()->get('lang')]}}">
+                        <input autocomplete="off" name="search" id="headersearch" type="text" class="form-control" placeholder="{{$language[117][session()->get('lang')]}}">
                         <button type="button" class="header-option-btn tooltip"><i class="fas fa-sliders-h"></i><span class="tooltext left">FilterOption</span></button>
                     </div>
                     <div class="header-search-option">
@@ -161,7 +237,7 @@ body {
                             <div class="col-12">
                                 <div class="form-group">
                                     <select name="city" id="headercity" class="form-control custom-select">
-                                        <option value="">{{$language[62][session()->get('lang')]}}*</option>
+                                        <option value="">{{$language[118][session()->get('lang')]}}*</option>
                                         @foreach($city as $row)
                                         <option value="{{$row->id}}">{{$row->city}}</option>
                                         @endforeach
@@ -171,7 +247,7 @@ body {
                             <div class="col-6">
                                 <div class="form-group">
                                     <select name="category" id="headercategory" class="form-control custom-select">
-                                        <option value="">{{$language[63][session()->get('lang')]}}*</option>
+                                        <option value="">{{$language[119][session()->get('lang')]}}*</option>
                                         @foreach($category as $row)
                                         <option value="{{$row->id}}">{{$row->category}}</option>
                                         @endforeach
@@ -181,7 +257,7 @@ body {
                             <div class="col-6">
                                 <div class="form-group">
                                     <select name="subcategory" id="headersubcategory" class="form-control custom-select">
-                                        <option value="">{{$language[64][session()->get('lang')]}}*</option>
+                                        <option value="">{{$language[120][session()->get('lang')]}}*</option>
                                         @foreach($subcategory as $row)
                                         <option value="{{$row->id}}">{{$row->category}}</option>
                                         @endforeach
@@ -189,7 +265,7 @@ body {
                                 </div>
                             </div>
                             <div class="col-12">
-                                <div class="form-btn"><button onclick="SearchPost()" type="button" class="btn btn-inline"><i class="fas fa-search"></i><span>Search</span></button></div>
+                                <div class="form-btn"><button onclick="SearchPost()" type="button" class="btn btn-inline"><i class="fas fa-search"></i><span>{{$language[121][session()->get('lang')]}}</span></button></div>
                             </div>
                         </div>
                     </div>
@@ -215,33 +291,33 @@ body {
                     </ul>
 
                     @if(Auth::check())
-                    <a href="/customer/create-post-ad" class="btn btn-inline"><i class="fas fa-plus-circle"></i><span>{{$language[59][session()->get('lang')]}}</span></a>
+                    <a href="/customer/create-post-ad" class="btn btn-inline"><i class="fas fa-plus-circle"></i><span>{{$language[122][session()->get('lang')]}}</span></a>
                     @else 
-                    <a href="/login" class="btn btn-inline"><i class="fas fa-plus-circle"></i><span>{{$language[59][session()->get('lang')]}}</span></a>
+                    <a href="/login" class="btn btn-inline"><i class="fas fa-plus-circle"></i><span>{{$language[122][session()->get('lang')]}}</span></a>
                     @endif
 
-                    <!-- <div id="google_translate_element" style="display: none;"></div> -->
+                    <div id="google_translate_element" style="display: none;"></div>
+
+                    @if(session()->get('lang') == 'english')
+                    <a onclick="translateLanguage('Arabic');" href="javascript:void(0)" class="btn btn-inline new-language"><i class="flag-icon flag-icon-ae"></i><span>عربي</span></a>
+                    @else 
+                    <a onclick="translateLanguage('English');" href="javascript:void(0)" class="btn btn-inline new-language"><i class="flag-icon flag-icon-us"></i><span>English</span></a>
+                    @endif
 
                     <!-- <ul style="width:120px !important;margin-left:5px;" class="list-unstyled list-inline ct-topbar__list">
-                        <li style="padding-left:5px;" class="ct-language"><a><i class="fas fa-globe"></i> Language <i class="fa fa-arrow-down"></a></i>
+                        <li style="padding-left:5px;" class="ct-language new-language"><a><i class="fas fa-globe"></i> Language <i class="fa fa-caret-down"></a></i>
                             <ul class="list-unstyled ct-language__dropdown">
-                            <li><a onclick="translateLanguage('English');" href="#" class="lang-en lang-select" data-lang="en"><span class="flag-icon flag-icon-us"></span> English</a></li>
-                            <li><a onclick="translateLanguage('Arabic');" href="#" class="lang-ar lang-select" data-lang="ar"><span class="flag-icon flag-icon-ae"></span> Arabic</a></li>
+                            <li><a onclick="translateLanguage('English');" href="javascript:void(0)" class="lang-en lang-select" data-lang="en"><span class="flag-icon flag-icon-us"></span> English</a></li>
+                            <li><a onclick="translateLanguage('Arabic');" href="javascript:void(0)" class="lang-ar lang-select" data-lang="ar"><span class="flag-icon flag-icon-ae"></span> Arabic</a></li>
                             </ul>
                         </li>
                     </ul> -->
 
-                    @if(session()->get('lang') == 'english')
-                    <a onclick="updateLanguage('arabic');" href="javascript:void(0)" class="btn btn-inline"><i class="flag-icon flag-icon-ae"></i><span>عربي</span></a>
-                    @else 
-                    <a onclick="updateLanguage('english');" href="javascript:void(0)" class="btn btn-inline"><i class="flag-icon flag-icon-us"></i><span>English</span></a>
-                    @endif
-
                     <!-- <ul style="width:120px !important;margin-left:5px;" class="list-unstyled list-inline ct-topbar__list">
                         <li style="padding-left:5px;" class="ct-language"><a><i class="fas fa-globe"></i> {{$language[1][session()->get('lang')]}} <i class="fa fa-arrow-down"></a></i>
                             <ul class="list-unstyled ct-language__dropdown">
-                            <li><a onclick="updateLanguage('english');" href="#" class="lang-en lang-select" data-lang="en"><span class="flag-icon flag-icon-us"></span> English</a></li>
-                            <li><a onclick="updateLanguage('arabic');" href="#" class="lang-ar lang-select" data-lang="ar"><span class="flag-icon flag-icon-ae"></span> Arabic</a></li>
+                            <li><a onclick="updateLanguage('english');" href="javascript:void(0)" class="lang-en lang-select" data-lang="en"><span class="flag-icon flag-icon-us"></span> English</a></li>
+                            <li><a onclick="updateLanguage('arabic');" href="javascript:void(0)" class="lang-ar lang-select" data-lang="ar"><span class="flag-icon flag-icon-ae"></span> Arabic</a></li>
                             </ul>
                         </li>
                     </ul> -->
@@ -259,23 +335,23 @@ body {
                 <div class="sidebar-menu">
                     <div class="tab-pane active" id="main-menu">
                         <ul class="navbar-list">
-                            <li class="navbar-item"><a class="navbar-link" href="/">{{$language[60][session()->get('lang')]}}</a></li>
+                            <li class="navbar-item"><a class="navbar-link" href="/">{{$language[123][session()->get('lang')]}}</a></li>
                             <li class="navbar-item navbar-dropdown">
-                                <a class="navbar-link" href="#"><span>{{$language[17][session()->get('lang')]}}</span><i class="fas fa-plus"></i></a>
+                                <a class="navbar-link" href="javascript:void(0)"><span>{{$language[124][session()->get('lang')]}}</span><i class="fas fa-plus"></i></a>
                                 <ul class="dropdown-list">
-                                <li><a class="dropdown-link" href="/how-it-works">{{$language[19][session()->get('lang')]}}</a></li>
-                                <li><a class="dropdown-link" href="/our-story">{{$language[21][session()->get('lang')]}}</a></li>
-                                <li><a class="dropdown-link" href="/auto-dealerships">{{$language[23][session()->get('lang')]}}</a></li>
-                                <li><a class="dropdown-link" href="/trust-saftey">{{$language[24][session()->get('lang')]}}</a></li>
-                                <li><a class="dropdown-link" href="/terms">{{$language[18][session()->get('lang')]}}</a></li>
-                                <li><a class="dropdown-link" href="/community">{{$language[25][session()->get('lang')]}}</a></li>
-                                <li><a class="dropdown-link" href="/blog">{{$language[33][session()->get('lang')]}}</a></li>
+                                <li><a class="dropdown-link" href="/how-it-works">{{$language[125][session()->get('lang')]}}</a></li>
+                                <li><a class="dropdown-link" href="/our-story">{{$language[126][session()->get('lang')]}}</a></li>
+                                <li><a class="dropdown-link" href="/auto-dealerships">{{$language[127][session()->get('lang')]}}</a></li>
+                                <li><a class="dropdown-link" href="/trust-saftey">{{$language[128][session()->get('lang')]}}</a></li>
+                                <li><a class="dropdown-link" href="/terms">{{$language[129][session()->get('lang')]}}</a></li>
+                                <li><a class="dropdown-link" href="/community">{{$language[130][session()->get('lang')]}}</a></li>
+                                <li><a class="dropdown-link" href="/blog">{{$language[131][session()->get('lang')]}}</a></li>
                                 </ul>
                             </li>
-                            <li class="navbar-item"><a class="navbar-link" href="/category-list">{{$language[11][session()->get('lang')]}}</a></li>
+                            <li class="navbar-item"><a class="navbar-link" href="/category-list">{{$language[132][session()->get('lang')]}}</a></li>
                             <!-- <li class="navbar-item"><a class="navbar-link" href="/packages">{{$language[13][session()->get('lang')]}}</a></li> -->
-                            <li class="navbar-item"><a class="navbar-link" href="/faq">{{$language[36][session()->get('lang')]}}</a></li>
-                            <li class="navbar-item"><a class="navbar-link" href="/contact">{{$language[74][session()->get('lang')]}}</a></li>
+                            <li class="navbar-item"><a class="navbar-link" href="/faq">{{$language[133][session()->get('lang')]}}</a></li>
+                            <li class="navbar-item"><a class="navbar-link" href="/contact">{{$language[134][session()->get('lang')]}}</a></li>
 
                             @if(session()->get('lang') == 'english')
                             <li class="navbar-item"><a class="navbar-link" onclick="updateLanguage('arabic');" href="javascript:void(0)">عربي</a></li>
@@ -299,10 +375,10 @@ body {
                 @endif
                 <!-- <li><a href="/category-view"><i class="fas fa-star"></i><sup>0</sup></a></li> -->
                 @if(Auth::check())
-                <li><a class="plus-btn" href="/customer/create-post-ad"><i class="fas fa-plus"></i><span>{{$language[59][session()->get('lang')]}}</span></a>
+                <li><a class="plus-btn" href="/customer/create-post-ad"><i class="fas fa-plus"></i><span>{{$language[122][session()->get('lang')]}}</span></a>
                 </li>
                 @else 
-                <li><a class="plus-btn" href="/login"><i class="fas fa-plus"></i><span>{{$language[59][session()->get('lang')]}}</span></a>
+                <li><a class="plus-btn" href="/login"><i class="fas fa-plus"></i><span>{{$language[122][session()->get('lang')]}}</span></a>
                 </li>
                 @endif
                 @if(Auth::check())
@@ -320,7 +396,7 @@ body {
     </div>
     @yield('section')
     <style>
-       .footer-part {
+        .footer-part {
             background: #ffffff !important;
             color:#000 !important;
         }
@@ -334,17 +410,17 @@ body {
     <footer class="footer-part">
         <div class="container wrap-footer">
             <div class="row newsletter">
-                <!-- <div class="col-lg-6">
+                <!-- <div class="col-6 col-lg-6 col-md-12">
                     <div class="news-content">
                         <h2 style="color:#fff;">{{$language[51][session()->get('lang')]}}</h2>
                         <p style="color:#000;">{{$settings->footer_description}}</p>
                     </div>
                 </div> -->
-                <div style="color:#000;" class="col-lg-12">
+                <div style="color:#000;" class="col-12 col-lg-8 col-md-8 offset-md-2 offset-lg-2">
                     <form method="post" id="news-form" class="news-form">
                     {{csrf_field()}}
-                        <input name="news_letter_email" type="email" placeholder="{{$language[65][session()->get('lang')]}}">
-                        <button type="button" onclick="SaveEmail()" class="btn btn-inline"><i class="fas fa-envelope"></i><span>{{$language[54][session()->get('lang')]}}</span></button>
+                        <input name="news_letter_email" type="email" placeholder="{{$language[135][session()->get('lang')]}}">
+                        <button type="button" onclick="SaveEmail()" class="btn btn-inline"><i class="fas fa-envelope"></i><span>{{$language[136][session()->get('lang')]}}</span></button>
                     </form>
                 </div>
             </div>
@@ -420,7 +496,7 @@ body {
         <div style="background: linear-gradient(to right, rgb(52 70 89 / 70%), rgb(0 0 0 / 70%))!important;color:#000 !important;" class="footer-end">
             <div class="container">
                 <div class="footer-end-content">
-                    <p style="color:#fff;">{{$language[52][session()->get('lang')]}} &copy; Foundit</p>
+                    <p style="color:#fff;">{{$language[137][session()->get('lang')]}}</p>
                     <ul class="social-transparent footer-social">
                         <li><a target="_blank" href="{{$settings->facebook}}"><i class="fab fa-facebook-f"></i></a></li>
                         <li><a target="_blank" href="{{$settings->twitter}}"><i class="fab fa-twitter"></i></a></li>
@@ -439,8 +515,20 @@ body {
     <script src="/website/js/vendor/popper.min.js"></script>
     <script src="/website/js/vendor/bootstrap.min.js"></script>
     <script src="/website/js/vendor/slick.min.js"></script>
-    <script src="/website/js/custom/slick.js"></script>
+    <!-- <script src="/website/js/custom/slick.js"></script> -->
     <script src="/website/js/custom/main.js"></script>
+    <!-- <script>
+$( document ).ready(function() {
+    var viewMode = getCookie("view-mode");
+if(viewMode == "desktop"){
+    console.log("desktop");
+    viewport.setAttribute('content', 'width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no');
+}else if (viewMode == "mobile"){
+    viewport.setAttribute('content', 'width=1300');
+    console.log("mobile");
+}
+});
+</script> -->
     <script>
     $('#headercategory').change(function(){
         var id = $('#headercategory').val();
@@ -457,6 +545,9 @@ body {
 @yield('extra-js')
 <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 <script type="text/javascript">
+// $( document ).ready(function() {
+// $('#:2.container').hide();
+// });
     // function googleTranslateElementInit() {
     //     new google.translate.TranslateElement({pageLanguage: 'en',includedLanguages: 'ar,en',}, 'google_translate_element');
     // }
@@ -485,14 +576,30 @@ body {
     }
 
     function translateLanguage(lang) {
-        googleTranslateElementInit();
-        if(lang == 'Arabic'){
-            $("html").children().css("direction","rtl");
+        // googleTranslateElementInit();
+        // if(lang == 'Arabic'){
+        //     $("html").children().css("direction","rtl");
+        // }
+        // else{
+        //     $("html").children().css("direction","ltr");
+        //     location.reload();
+        // }
+        var lang1;
+        if(lang == 'English'){
+            lang1='english';
         }
         else{
-            $("html").children().css("direction","ltr");
-            location.reload();
+            lang1='arabic';
         }
+        $.ajax({
+            url : '/update-language/'+lang1,
+            type: "GET",
+            success: function(data)
+            {
+                googleTranslateElementInit();
+                location.reload();
+            }
+        });
         var $frame = $('.goog-te-menu-frame:first');
         if (!$frame.size()) {
             alert("Error: Could not find Google translate frame.");
@@ -565,7 +672,6 @@ function SaveEmail(){
         }
     });
 }
-
 function SearchPost(){
     var search = $('#headersearch').val();
     var category = $('#headercategory').val();
@@ -599,6 +705,72 @@ function SearchPost(){
     window.location.href = "/search-post/"+search1+'/'+city1+'/'+category1+'/'+subcategory1+'/0';
 }
 </script>
-</body>
 
+
+@if(session()->get('dir') == 'rtl')
+<script>
+$( document ).ready(function(){
+console.log("ready!");
+$(".suggest-slider").slick({rtl:true});
+$(".feature-slider").slick({rtl:true});
+$(".recomend-slider").slick({rtl:true});
+$(".blog-slider").slick({rtl:true});
+$(".feature-item-slider").slick({rtl:true});
+$(".ad-details-slider").slick({rtl:true});
+$(".ad-thumb-slider").slick({rtl:true});
+});
+</script>
+@endif
+
+
+@if(session()->get('lang') == 'english')
+<script>
+$( document ).ready(function(){
+console.log("ready!");
+$(".suggest-slider").slick({dots:!1,infinite:!0,autoplay:!0,arrows:!0,speed:1e3,prevArrow:'<i class="fas fa-long-arrow-alt-right dandik"></i>',nextArrow:'<i class="fas fa-long-arrow-alt-left bamdik"></i>',slidesToShow:6,slidesToScroll:3,responsive:[{breakpoint:1200,settings:{slidesToShow:5,slidesToScroll:5}},{breakpoint:992,settings:{slidesToShow:4,slidesToScroll:4}},{breakpoint:768,settings:{slidesToShow:3,slidesToScroll:3,arrows:!1}},{breakpoint:451,settings:{slidesToShow:2,slidesToScroll:2,arrows:!1}}]}),
+$(".feature-slider").slick({dots:!1,infinite:!0,speed:1e3,autoplay:!1,arrows:!0,fade:!1,slidesToShow:4,slidesToScroll:1,prevArrow:'<i class="fas fa-long-arrow-alt-right dandik"></i>',nextArrow:'<i class="fas fa-long-arrow-alt-left bamdik"></i>',responsive:[{breakpoint:1199,settings:{slidesToShow:3,slidesToScroll:1,infinite:!0,dots:!0}},{breakpoint:991,settings:{slidesToShow:2,slidesToScroll:1,infinite:!0,dots:!0}},{breakpoint:767,settings:{slidesToShow:1,slidesToScroll:1}},{breakpoint:575,settings:{slidesToShow:1,slidesToScroll:1}}]}),
+$(".recomend-slider").slick({dots:!1,infinite:!0,speed:1e3,autoplay:!0,arrows:!0,fade:!1,slidesToShow:4,slidesToScroll:1,prevArrow:'<i class="fas fa-long-arrow-alt-right dandik"></i>',nextArrow:'<i class="fas fa-long-arrow-alt-left bamdik"></i>',responsive:[{breakpoint:1200,settings:{slidesToShow:3,slidesToScroll:3}},{breakpoint:992,settings:{slidesToShow:2,slidesToScroll:2}},{breakpoint:768,settings:{slidesToShow:1,slidesToScroll:1,variableWidth:!0}},{breakpoint:576,settings:{slidesToShow:1,slidesToScroll:1,variableWidth:!0,arrows:!1}}]}),
+$(".blog-slider").slick({dots:!1,infinite:!0,speed:800,autoplay:!0,arrows:!0,fade:!1,slidesToShow:3,slidesToScroll:1,prevArrow:'<i class="fas fa-long-arrow-alt-right dandik"></i>',nextArrow:'<i class="fas fa-long-arrow-alt-left bamdik"></i>',responsive:[{breakpoint:992,settings:{slidesToShow:2,slidesToScroll:2}},{breakpoint:768,settings:{slidesToShow:1,slidesToScroll:1,variableWidth:!0,arrows:!0}},{breakpoint:576,settings:{slidesToShow:1,slidesToScroll:1,variableWidth:!0,arrows:!1}}]}),
+$(".feature-item-slider").slick({slidesToShow:1,slidesToScroll:1,arrows:!0,fade:!0,asNavFor:".feature-thumb-slider",prevArrow:'<i class="fas fa-long-arrow-alt-right dandik"></i>',nextArrow:'<i class="fas fa-long-arrow-alt-left bamdik"></i>',responsive:[{breakpoint:576,settings:{slidesToShow:1,slidesToScroll:1,arrows:!1}}]}),$(".feature-thumb-slider").slick({slidesToShow:3,slidesToScroll:1,asNavFor:".feature-item-slider",dots:!1,arrows:!1,autoplay:!0,centerMode:!0,focusOnSelect:!0,responsive:[{breakpoint:992,settings:{slidesToShow:2,slidesToScroll:1,arrows:!1}},{breakpoint:768,settings:{slidesToShow:3,slidesToScroll:1,arrows:!1}},{breakpoint:576,settings:{slidesToShow:3,slidesToScroll:1,arrows:!1}},{breakpoint:400,settings:{slidesToShow:2,slidesToScroll:1,arrows:!1}}]}),
+$(".ad-details-slider").slick({slidesToShow:1,slidesToScroll:1,autoplay:!0,arrows:!0,fade:!0,asNavFor:".ad-thumb-slider",prevArrow:'<i class="fas fa-long-arrow-alt-right dandik"></i>',nextArrow:'<i class="fas fa-long-arrow-alt-left bamdik"></i>',responsive:[{breakpoint:576,settings:{slidesToShow:1,slidesToScroll:1,arrows:!1}}]}),
+$(".ad-thumb-slider").slick({slidesToShow:3,slidesToScroll:1,asNavFor:".ad-details-slider",dots:!1,arrows:!1,autoplay:!0,centerMode:!0,focusOnSelect:!0,responsive:[{breakpoint:992,settings:{slidesToShow:3,slidesToScroll:1,arrows:!1}},{breakpoint:768,settings:{slidesToShow:3,slidesToScroll:1,arrows:!1}},{breakpoint:576,settings:{slidesToShow:3,slidesToScroll:1,arrows:!1}},{breakpoint:400,settings:{slidesToShow:2,slidesToScroll:1,arrows:!1}}]}),$(".ad-details-feature").slick({dots:!1,infinite:!0,speed:1e3,autoplay:!0,arrows:!0,fade:!1,slidesToShow:1,slidesToScroll:1,prevArrow:'<i class="fas fa-long-arrow-alt-right dandik"></i>',nextArrow:'<i class="fas fa-long-arrow-alt-left bamdik"></i>',responsive:[{breakpoint:1200,settings:{slidesToShow:1,slidesToScroll:1}},{breakpoint:992,settings:{slidesToShow:2,slidesToScroll:1}},{breakpoint:768,settings:{slidesToShow:1,slidesToScroll:1}},{breakpoint:576,settings:{slidesToShow:1,slidesToScroll:1,arrows:!1}}]}),$(".related-slider").slick({dots:!1,infinite:!0,speed:1e3,autoplay:!0,arrows:!0,fade:!1,slidesToShow:4,slidesToScroll:1,prevArrow:'<i class="fas fa-long-arrow-alt-right dandik"></i>',nextArrow:'<i class="fas fa-long-arrow-alt-left bamdik"></i>',responsive:[{breakpoint:1200,settings:{slidesToShow:3,slidesToScroll:3}},{breakpoint:992,settings:{slidesToShow:2,slidesToScroll:2}},{breakpoint:768,settings:{slidesToShow:2,slidesToScroll:1}},{breakpoint:576,settings:{slidesToShow:1,slidesToScroll:1,variableWidth:!0,arrows:!1}}]});
+});
+</script>
+@elseif(session()->get('lang') == 'arabic')
+<script>
+$( document ).ready(function() {
+console.log( "ready!" );
+$(".suggest-slider").slick({rtl:true,dots:!1,infinite:!0,autoplay:!0,arrows:!0,speed:1e3,prevArrow:'<i class="fas fa-long-arrow-alt-right dandik"></i>',nextArrow:'<i class="fas fa-long-arrow-alt-left bamdik"></i>',slidesToShow:6,slidesToScroll:3,responsive:[{breakpoint:1200,settings:{slidesToShow:5,slidesToScroll:5}},{breakpoint:992,settings:{slidesToShow:4,slidesToScroll:4}},{breakpoint:768,settings:{slidesToShow:3,slidesToScroll:3,arrows:!1}},{breakpoint:451,settings:{slidesToShow:2,slidesToScroll:2,arrows:!1}}]}),
+$(".feature-slider").slick({rtl:true,dots:!1,infinite:!0,speed:1e3,autoplay:!1,arrows:!0,fade:!1,slidesToShow:4,slidesToScroll:1,prevArrow:'<i class="fas fa-long-arrow-alt-right dandik"></i>',nextArrow:'<i class="fas fa-long-arrow-alt-left bamdik"></i>',responsive:[{breakpoint:1199,settings:{slidesToShow:3,slidesToScroll:1,infinite:!0,dots:!0}},{breakpoint:991,settings:{slidesToShow:2,slidesToScroll:1,infinite:!0,dots:!0}},{breakpoint:767,settings:{slidesToShow:1,slidesToScroll:1}},{breakpoint:575,settings:{slidesToShow:1,slidesToScroll:1}}]}),
+$(".recomend-slider").slick({rtl:true,dots:!1,infinite:!0,speed:1e3,autoplay:!0,arrows:!0,fade:!1,slidesToShow:4,slidesToScroll:1,prevArrow:'<i class="fas fa-long-arrow-alt-right dandik"></i>',nextArrow:'<i class="fas fa-long-arrow-alt-left bamdik"></i>',responsive:[{breakpoint:1200,settings:{slidesToShow:3,slidesToScroll:3}},{breakpoint:992,settings:{slidesToShow:2,slidesToScroll:2}},{breakpoint:768,settings:{slidesToShow:1,slidesToScroll:1,variableWidth:!0}},{breakpoint:576,settings:{slidesToShow:1,slidesToScroll:1,variableWidth:!0,arrows:!1}}]}),
+$(".blog-slider").slick({rtl:true,dots:!1,infinite:!0,speed:800,autoplay:!0,arrows:!0,fade:!1,slidesToShow:3,slidesToScroll:1,prevArrow:'<i class="fas fa-long-arrow-alt-right dandik"></i>',nextArrow:'<i class="fas fa-long-arrow-alt-left bamdik"></i>',responsive:[{breakpoint:992,settings:{slidesToShow:2,slidesToScroll:2}},{breakpoint:768,settings:{slidesToShow:1,slidesToScroll:1,variableWidth:!0,arrows:!0}},{breakpoint:576,settings:{slidesToShow:1,slidesToScroll:1,variableWidth:!0,arrows:!1}}]}),
+$(".feature-item-slider").slick({rtl:true,slidesToShow:1,slidesToScroll:1,arrows:!0,fade:!0,asNavFor:".feature-thumb-slider",prevArrow:'<i class="fas fa-long-arrow-alt-right dandik"></i>',nextArrow:'<i class="fas fa-long-arrow-alt-left bamdik"></i>',responsive:[{breakpoint:576,settings:{slidesToShow:1,slidesToScroll:1,arrows:!1}}]}),$(".feature-thumb-slider").slick({slidesToShow:3,slidesToScroll:1,asNavFor:".feature-item-slider",dots:!1,arrows:!1,autoplay:!0,centerMode:!0,focusOnSelect:!0,responsive:[{breakpoint:992,settings:{slidesToShow:2,slidesToScroll:1,arrows:!1}},{breakpoint:768,settings:{slidesToShow:3,slidesToScroll:1,arrows:!1}},{breakpoint:576,settings:{slidesToShow:3,slidesToScroll:1,arrows:!1}},{breakpoint:400,settings:{slidesToShow:2,slidesToScroll:1,arrows:!1}}]}),
+$(".ad-details-slider").slick({rtl:true,slidesToShow:1,slidesToScroll:1,autoplay:!0,arrows:!0,fade:!0,asNavFor:".ad-thumb-slider",prevArrow:'<i class="fas fa-long-arrow-alt-right dandik"></i>',nextArrow:'<i class="fas fa-long-arrow-alt-left bamdik"></i>',responsive:[{breakpoint:576,settings:{slidesToShow:1,slidesToScroll:1,arrows:!1}}]}),
+$(".ad-thumb-slider").slick({rtl:true,slidesToShow:3,slidesToScroll:1,asNavFor:".ad-details-slider",dots:!1,arrows:!1,autoplay:!0,centerMode:!0,focusOnSelect:!0,responsive:[{breakpoint:992,settings:{slidesToShow:3,slidesToScroll:1,arrows:!1}},{breakpoint:768,settings:{slidesToShow:3,slidesToScroll:1,arrows:!1}},{breakpoint:576,settings:{slidesToShow:3,slidesToScroll:1,arrows:!1}},{breakpoint:400,settings:{slidesToShow:2,slidesToScroll:1,arrows:!1}}]}),$(".ad-details-feature").slick({dots:!1,infinite:!0,speed:1e3,autoplay:!0,arrows:!0,fade:!1,slidesToShow:1,slidesToScroll:1,prevArrow:'<i class="fas fa-long-arrow-alt-right dandik"></i>',nextArrow:'<i class="fas fa-long-arrow-alt-left bamdik"></i>',responsive:[{breakpoint:1200,settings:{slidesToShow:1,slidesToScroll:1}},{breakpoint:992,settings:{slidesToShow:2,slidesToScroll:1}},{breakpoint:768,settings:{slidesToShow:1,slidesToScroll:1}},{breakpoint:576,settings:{slidesToShow:1,slidesToScroll:1,arrows:!1}}]}),$(".related-slider").slick({dots:!1,infinite:!0,speed:1e3,autoplay:!0,arrows:!0,fade:!1,slidesToShow:4,slidesToScroll:1,prevArrow:'<i class="fas fa-long-arrow-alt-right dandik"></i>',nextArrow:'<i class="fas fa-long-arrow-alt-left bamdik"></i>',responsive:[{breakpoint:1200,settings:{slidesToShow:3,slidesToScroll:3}},{breakpoint:992,settings:{slidesToShow:2,slidesToScroll:2}},{breakpoint:768,settings:{slidesToShow:2,slidesToScroll:1}},{breakpoint:576,settings:{slidesToShow:1,slidesToScroll:1,variableWidth:!0,arrows:!1}}]});
+
+});
+</script>
+@else 
+<script>
+$( document ).ready(function(){
+console.log("ready!");
+$(".suggest-slider").slick({dots:!1,infinite:!0,autoplay:!0,arrows:!0,speed:1e3,prevArrow:'<i class="fas fa-long-arrow-alt-right dandik"></i>',nextArrow:'<i class="fas fa-long-arrow-alt-left bamdik"></i>',slidesToShow:6,slidesToScroll:3,responsive:[{breakpoint:1200,settings:{slidesToShow:5,slidesToScroll:5}},{breakpoint:992,settings:{slidesToShow:4,slidesToScroll:4}},{breakpoint:768,settings:{slidesToShow:3,slidesToScroll:3,arrows:!1}},{breakpoint:451,settings:{slidesToShow:2,slidesToScroll:2,arrows:!1}}]}),
+$(".feature-slider").slick({dots:!1,infinite:!0,speed:1e3,autoplay:!1,arrows:!0,fade:!1,slidesToShow:4,slidesToScroll:1,prevArrow:'<i class="fas fa-long-arrow-alt-right dandik"></i>',nextArrow:'<i class="fas fa-long-arrow-alt-left bamdik"></i>',responsive:[{breakpoint:1199,settings:{slidesToShow:3,slidesToScroll:1,infinite:!0,dots:!0}},{breakpoint:991,settings:{slidesToShow:2,slidesToScroll:1,infinite:!0,dots:!0}},{breakpoint:767,settings:{slidesToShow:1,slidesToScroll:1}},{breakpoint:575,settings:{slidesToShow:1,slidesToScroll:1}}]}),
+$(".recomend-slider").slick({dots:!1,infinite:!0,speed:1e3,autoplay:!0,arrows:!0,fade:!1,slidesToShow:4,slidesToScroll:1,prevArrow:'<i class="fas fa-long-arrow-alt-right dandik"></i>',nextArrow:'<i class="fas fa-long-arrow-alt-left bamdik"></i>',responsive:[{breakpoint:1200,settings:{slidesToShow:3,slidesToScroll:3}},{breakpoint:992,settings:{slidesToShow:2,slidesToScroll:2}},{breakpoint:768,settings:{slidesToShow:1,slidesToScroll:1,variableWidth:!0}},{breakpoint:576,settings:{slidesToShow:1,slidesToScroll:1,variableWidth:!0,arrows:!1}}]}),
+$(".blog-slider").slick({dots:!1,infinite:!0,speed:800,autoplay:!0,arrows:!0,fade:!1,slidesToShow:3,slidesToScroll:1,prevArrow:'<i class="fas fa-long-arrow-alt-right dandik"></i>',nextArrow:'<i class="fas fa-long-arrow-alt-left bamdik"></i>',responsive:[{breakpoint:992,settings:{slidesToShow:2,slidesToScroll:2}},{breakpoint:768,settings:{slidesToShow:1,slidesToScroll:1,variableWidth:!0,arrows:!0}},{breakpoint:576,settings:{slidesToShow:1,slidesToScroll:1,variableWidth:!0,arrows:!1}}]}),
+$(".feature-item-slider").slick({slidesToShow:1,slidesToScroll:1,arrows:!0,fade:!0,asNavFor:".feature-thumb-slider",prevArrow:'<i class="fas fa-long-arrow-alt-right dandik"></i>',nextArrow:'<i class="fas fa-long-arrow-alt-left bamdik"></i>',responsive:[{breakpoint:576,settings:{slidesToShow:1,slidesToScroll:1,arrows:!1}}]}),$(".feature-thumb-slider").slick({slidesToShow:3,slidesToScroll:1,asNavFor:".feature-item-slider",dots:!1,arrows:!1,autoplay:!0,centerMode:!0,focusOnSelect:!0,responsive:[{breakpoint:992,settings:{slidesToShow:2,slidesToScroll:1,arrows:!1}},{breakpoint:768,settings:{slidesToShow:3,slidesToScroll:1,arrows:!1}},{breakpoint:576,settings:{slidesToShow:3,slidesToScroll:1,arrows:!1}},{breakpoint:400,settings:{slidesToShow:2,slidesToScroll:1,arrows:!1}}]}),
+$(".ad-details-slider").slick({slidesToShow:1,slidesToScroll:1,autoplay:!0,arrows:!0,fade:!0,asNavFor:".ad-thumb-slider",prevArrow:'<i class="fas fa-long-arrow-alt-right dandik"></i>',nextArrow:'<i class="fas fa-long-arrow-alt-left bamdik"></i>',responsive:[{breakpoint:576,settings:{slidesToShow:1,slidesToScroll:1,arrows:!1}}]}),
+$(".ad-thumb-slider").slick({slidesToShow:3,slidesToScroll:1,asNavFor:".ad-details-slider",dots:!1,arrows:!1,autoplay:!0,centerMode:!0,focusOnSelect:!0,responsive:[{breakpoint:992,settings:{slidesToShow:3,slidesToScroll:1,arrows:!1}},{breakpoint:768,settings:{slidesToShow:3,slidesToScroll:1,arrows:!1}},{breakpoint:576,settings:{slidesToShow:3,slidesToScroll:1,arrows:!1}},{breakpoint:400,settings:{slidesToShow:2,slidesToScroll:1,arrows:!1}}]}),$(".ad-details-feature").slick({dots:!1,infinite:!0,speed:1e3,autoplay:!0,arrows:!0,fade:!1,slidesToShow:1,slidesToScroll:1,prevArrow:'<i class="fas fa-long-arrow-alt-right dandik"></i>',nextArrow:'<i class="fas fa-long-arrow-alt-left bamdik"></i>',responsive:[{breakpoint:1200,settings:{slidesToShow:1,slidesToScroll:1}},{breakpoint:992,settings:{slidesToShow:2,slidesToScroll:1}},{breakpoint:768,settings:{slidesToShow:1,slidesToScroll:1}},{breakpoint:576,settings:{slidesToShow:1,slidesToScroll:1,arrows:!1}}]}),$(".related-slider").slick({dots:!1,infinite:!0,speed:1e3,autoplay:!0,arrows:!0,fade:!1,slidesToShow:4,slidesToScroll:1,prevArrow:'<i class="fas fa-long-arrow-alt-right dandik"></i>',nextArrow:'<i class="fas fa-long-arrow-alt-left bamdik"></i>',responsive:[{breakpoint:1200,settings:{slidesToShow:3,slidesToScroll:3}},{breakpoint:992,settings:{slidesToShow:2,slidesToScroll:2}},{breakpoint:768,settings:{slidesToShow:2,slidesToScroll:1}},{breakpoint:576,settings:{slidesToShow:1,slidesToScroll:1,variableWidth:!0,arrows:!1}}]});
+});
+</script>
+@endif
+<script>
+$('input').keydown( function(e) {
+    var key = e.charCode ? e.charCode : e.keyCode ? e.keyCode : 0;
+    if(key == 13) {
+        e.preventDefault();
+    }
+});
+</script>
+</body>
 </html>

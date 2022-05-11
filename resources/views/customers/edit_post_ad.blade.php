@@ -393,10 +393,10 @@ right: -11px;
             <div class="row">
                 <div class="col-lg-12">
                     <div class="single-content">
-                        <h2>{{$language[123][session()->get('lang')]}}</h2>
+                        <h2>{{$language[74][session()->get('lang')]}}</h2>
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="/">{{$language[60][session()->get('lang')]}}</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">{{$language[123][session()->get('lang')]}}</li>
+                            <li class="breadcrumb-item"><a href="/">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">{{$language[74][session()->get('lang')]}}</li>
                         </ol>
                     </div>
                 </div>
@@ -415,18 +415,18 @@ right: -11px;
     <input value="{{$post_ad->id}}" type="hidden" name="id" id="id">
     <input value="{{Auth::user()->id}}" type="hidden" name="customer_id" id="customer_id">
         <fieldset>
-            <center><h3>{{$language[146][session()->get('lang')]}}</h3></center>
+            <center><h3>{{$language[75][session()->get('lang')]}}</h3></center>
 
             <div class="row">
                 <div class="col-lg-12">
                     <div class="form-group">
-                        <label class="form-label">{{$language[147][session()->get('lang')]}}</label>
+                        <label class="form-label">{{$language[76][session()->get('lang')]}}</label>
                         <input value="{{$post_ad->title}}" name="title" id="title" type="text" class="form-control" placeholder="Type your product title here">
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="form-group">
-                        <label class="form-label">{{$language[148][session()->get('lang')]}}</label>
+                        <label class="form-label">{{$language[77][session()->get('lang')]}}</label>
                         <select disabled name="post_type" id="post_type" class="form-control custom-select">
                             <option {{ ($post_ad->post_type == '0' ? ' selected' : '') }} value="0">Normal Post</option>
                         </select>
@@ -434,13 +434,13 @@ right: -11px;
                 </div>
                 <div class="col-lg-6">
                     <div class="form-group">
-                        <label class="form-label">{{$language[149][session()->get('lang')]}}</label>
+                        <label class="form-label">{{$language[78][session()->get('lang')]}}</label>
                         <input value="{{$post_ad->price}}" name="price" id="price" type="number" class="form-control" placeholder="Enter your pricing amount">
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="form-group">
-                        <label class="form-label">{{$language[150][session()->get('lang')]}}</label>
+                        <label class="form-label">{{$language[79][session()->get('lang')]}}</label>
                         <select name="category" id="category" class="form-control custom-select">
                             <option value="">Select Category(s)*</option>
                             @foreach($category as $row)
@@ -455,7 +455,7 @@ right: -11px;
                 </div>
                 <div class="col-lg-6">
                     <div class="form-group">
-                        <label class="form-label">{{$language[151][session()->get('lang')]}}</label>
+                        <label class="form-label">{{$language[80][session()->get('lang')]}}</label>
                         <select name="subcategory" id="subcategory" class="form-control custom-select">
                             <option value="">Select Sub Category(s)*</option>
                             @foreach($subcategory as $row)
@@ -474,7 +474,7 @@ right: -11px;
                     <div class="form-group">
                         <ul class="form-check-list">
                             <li>
-                                <label class="form-label">{{$language[152][session()->get('lang')]}}</label>
+                                <label class="form-label">{{$language[81][session()->get('lang')]}}</label>
                             </li>
                             <li>
                                 <input value="fixed" type="radio" class="form-check" id="price_condition1" name="price_condition" {{ ($post_ad->price_condition == 'fixed' ? ' checked' : '') }}>
@@ -507,7 +507,7 @@ right: -11px;
                     <div class="form-group">
                         <ul class="form-check-list">
                             <li>
-                                <label class="form-label">{{$language[153][session()->get('lang')]}}</label>
+                                <label class="form-label">{{$language[82][session()->get('lang')]}}</label>
                             </li>
                             <li>
                                 <input {{ ($post_ad->item_condition == 'used' ? ' checked' : '') }} value="used" type="radio" class="form-check" id="item_condition1" name="item_condition">
@@ -524,7 +524,7 @@ right: -11px;
                     <div class="form-group">
                         <ul class="form-check-list">
                             <li>
-                                <label class="form-label">{{$language[49][session()->get('lang')]}}</label>
+                                <label class="form-label">{{$language[83][session()->get('lang')]}}</label>
                             </li>
                             <li>
                                 <input disabled value="1" type="checkbox" class="form-check" id="popular_ads1" name="popular_ads" {{ ($post_ad->popular_ads == '1' ? ' checked' : '') }}>
@@ -537,7 +537,7 @@ right: -11px;
                     <div class="form-group">
                         <ul class="form-check-list">
                             <li>
-                                <label class="form-label">{{$language[70][session()->get('lang')]}}</label>
+                                <label class="form-label">{{$language[84][session()->get('lang')]}}</label>
                             </li>
                             <li>
                                 <input disabled value="1" type="checkbox" class="form-check" id="top_search1" name="top_search" {{ ($post_ad->top_search == '1' ? ' checked' : '') }}>
@@ -547,10 +547,10 @@ right: -11px;
                     </div>
                 </div>
             </div>
-            <input type="button" name="next" class="custom_input next action-button" value="{{$language[161][session()->get('lang')]}}" />
+            <input type="button" name="next" class="custom_input next action-button" value="Next" />
         </fieldset>	
         <fieldset>
-            <center><h3>{{$language[154][session()->get('lang')]}}</h3></center>
+            <center><h3>{{$language[85][session()->get('lang')]}}</h3></center>
             <div id="image_view" class="row">
                 <div value="1" class="center form-input panel_image">
                 <label for="file-ip-1">
@@ -609,12 +609,12 @@ right: -11px;
                 </div> -->
                 <div class="col-lg-12">
                     <div class="form-group">
-                        <label class="form-label">{{$language[157][session()->get('lang')]}}</label>
+                        <label class="form-label">{{$language[86][session()->get('lang')]}}</label>
                         <textarea autocomplete="off" name="decription" id="description" class="form-control" placeholder="Describe your message"></textarea>
                     </div>
                 </div>
             </div>
-            <input type="button" name="next" class="custom_input next action-button" value="{{$language[161][session()->get('lang')]}}" />
+            <input type="button" name="next" class="custom_input next action-button" value="Next" />
             <button style="float:left;" type="button" class="previous action-button-previous"><i class="fa fa-chevron-left"></i></button>
         </fieldset>	
         <!-- <fieldset>
@@ -630,36 +630,36 @@ right: -11px;
             </div>
         </fieldset>	 -->
         <fieldset>
-            <center><h3>{{$language[158][session()->get('lang')]}}</h3></center>
+            <center><h3>{{$language[87][session()->get('lang')]}}</h3></center>
             <div class="row">
                 <div class="col-lg-6">
                     <div class="form-group">
-                        <label class="form-label">{{$language[167][session()->get('lang')]}}</label>
+                        <label class="form-label">{{$language[88][session()->get('lang')]}}</label>
                         <input value="{{$post_ad->name}}" autocomplete="off" name="name" id="name" type="text" class="form-control" placeholder="Your Name">
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="form-group">
-                        <label class="form-label">{{$language[119][session()->get('lang')]}}</label>
+                        <label class="form-label">{{$language[89][session()->get('lang')]}}</label>
                         <input value="{{$post_ad->email}}" autocomplete="off" name="email" id="email" type="email" class="form-control" placeholder="Your Email">
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="form-group">
-                        <label class="form-label">{{$language[120][session()->get('lang')]}}</label>
+                        <label class="form-label">{{$language[90][session()->get('lang')]}}</label>
                         <input value="{{$post_ad->mobile}}" autocomplete="off" name="mobile" id="mobile" type="number" class="form-control" placeholder="Your Number">
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="form-group">
-                        <label class="form-label">{{$language[137][session()->get('lang')]}}</label>
+                        <label class="form-label">{{$language[91][session()->get('lang')]}}</label>
                         <input value="{{$post_ad->address}}" autocomplete="off" name="address" id="address" type="text" class="form-control" placeholder="Address">
                     </div>
                 </div>
                 
                 <div class="col-lg-6">
                     <div class="form-group">
-                        <label class="form-label">{{$language[159][session()->get('lang')]}}*</label>
+                        <label class="form-label">{{$language[92][session()->get('lang')]}}*</label>
                         <select name="city" id="city" class="form-control custom-select">
                             <option value="">Select City*</option>
                             @foreach($city as $row)
@@ -674,7 +674,7 @@ right: -11px;
                 </div>
                 <div class="col-lg-6">
                     <div class="form-group">
-                        <label class="form-label">{{$language[160][session()->get('lang')]}}*</label>
+                        <label class="form-label">{{$language[93][session()->get('lang')]}}*</label>
                         <select name="area" id="area" class="form-control custom-select">
                             <option value="">Select Area*</option>
                             @foreach($area as $row)
@@ -698,7 +698,7 @@ right: -11px;
                     <br>
                 </div>
             </div>
-            <input id="save" onclick="Save()" type="button" class="custom_input action-button" value="{{$language[166][session()->get('lang')]}}" />
+            <input id="save" onclick="Save()" type="button" class="custom_input action-button" value="Update your Ad" />
             <button style="float:left;" type="button" class="previous action-button-previous"><i class="fa fa-chevron-left"></i></button>
         </fieldset>	
     </form>

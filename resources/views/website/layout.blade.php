@@ -218,9 +218,9 @@ body {
                         <li><button type="button" class="header-menu"><i class="fas fa-align-left"></i></button></li>
                         <li><a href="/" class="header-logo"><img src="/website/images/logo.png" alt="logo"></a></li>
                         @if(Auth::check())
-                        <li><a href="/customer/dashboard" class="header-user"><i class="fas fa-user"></i><span>{{$language[3][session()->get('lang')]}}</span></a></li>
+                        <li><a href="/customer/dashboard" class="header-user"><i class="fas fa-user"></i><span>{{$language[115][session()->get('lang')]}}</span></a></li>
                         @else 
-                        <li><a href="/login" class="header-user"><i class="fas fa-user"></i><span>{{$language[47][session()->get('lang')]}}</span></a></li>
+                        <li><a href="/login" class="header-user"><i class="fas fa-user"></i><span>{{$language[116][session()->get('lang')]}}</span></a></li>
                         @endif
                         <li><button type="button" class="header-src"><i class="fas fa-search"></i></button></li>
                     </ul>
@@ -229,7 +229,7 @@ body {
                 {{ csrf_field() }}
                     <div class="header-main-search">
                         <button onclick="SearchPost()" type="button" class="header-search-btn"><i class="fas fa-search"></i></button>
-                        <input autocomplete="off" name="search" id="headersearch" type="text" class="form-control" placeholder="{{$language[46][session()->get('lang')]}}">
+                        <input autocomplete="off" name="search" id="headersearch" type="text" class="form-control" placeholder="{{$language[117][session()->get('lang')]}}">
                         <button type="button" class="header-option-btn tooltip"><i class="fas fa-sliders-h"></i><span class="tooltext left">FilterOption</span></button>
                     </div>
                     <div class="header-search-option">
@@ -237,7 +237,7 @@ body {
                             <div class="col-12">
                                 <div class="form-group">
                                     <select name="city" id="headercity" class="form-control custom-select">
-                                        <option value="">{{$language[62][session()->get('lang')]}}*</option>
+                                        <option value="">{{$language[118][session()->get('lang')]}}*</option>
                                         @foreach($city as $row)
                                         <option value="{{$row->id}}">{{$row->city}}</option>
                                         @endforeach
@@ -247,7 +247,7 @@ body {
                             <div class="col-6">
                                 <div class="form-group">
                                     <select name="category" id="headercategory" class="form-control custom-select">
-                                        <option value="">{{$language[63][session()->get('lang')]}}*</option>
+                                        <option value="">{{$language[119][session()->get('lang')]}}*</option>
                                         @foreach($category as $row)
                                         <option value="{{$row->id}}">{{$row->category}}</option>
                                         @endforeach
@@ -257,7 +257,7 @@ body {
                             <div class="col-6">
                                 <div class="form-group">
                                     <select name="subcategory" id="headersubcategory" class="form-control custom-select">
-                                        <option value="">{{$language[64][session()->get('lang')]}}*</option>
+                                        <option value="">{{$language[120][session()->get('lang')]}}*</option>
                                         @foreach($subcategory as $row)
                                         <option value="{{$row->id}}">{{$row->category}}</option>
                                         @endforeach
@@ -265,7 +265,7 @@ body {
                                 </div>
                             </div>
                             <div class="col-12">
-                                <div class="form-btn"><button onclick="SearchPost()" type="button" class="btn btn-inline"><i class="fas fa-search"></i><span>Search</span></button></div>
+                                <div class="form-btn"><button onclick="SearchPost()" type="button" class="btn btn-inline"><i class="fas fa-search"></i><span>{{$language[121][session()->get('lang')]}}</span></button></div>
                             </div>
                         </div>
                     </div>
@@ -291,9 +291,9 @@ body {
                     </ul>
 
                     @if(Auth::check())
-                    <a href="/customer/create-post-ad" class="btn btn-inline"><i class="fas fa-plus-circle"></i><span>{{$language[59][session()->get('lang')]}}</span></a>
+                    <a href="/customer/create-post-ad" class="btn btn-inline"><i class="fas fa-plus-circle"></i><span>{{$language[122][session()->get('lang')]}}</span></a>
                     @else 
-                    <a href="/login" class="btn btn-inline"><i class="fas fa-plus-circle"></i><span>{{$language[59][session()->get('lang')]}}</span></a>
+                    <a href="/login" class="btn btn-inline"><i class="fas fa-plus-circle"></i><span>{{$language[122][session()->get('lang')]}}</span></a>
                     @endif
 
                     <div id="google_translate_element" style="display: none;"></div>
@@ -335,23 +335,23 @@ body {
                 <div class="sidebar-menu">
                     <div class="tab-pane active" id="main-menu">
                         <ul class="navbar-list">
-                            <li class="navbar-item"><a class="navbar-link" href="/">{{$language[60][session()->get('lang')]}}</a></li>
+                            <li class="navbar-item"><a class="navbar-link" href="/">{{$language[123][session()->get('lang')]}}</a></li>
                             <li class="navbar-item navbar-dropdown">
-                                <a class="navbar-link" href="javascript:void(0)"><span>{{$language[17][session()->get('lang')]}}</span><i class="fas fa-plus"></i></a>
+                                <a class="navbar-link" href="javascript:void(0)"><span>{{$language[124][session()->get('lang')]}}</span><i class="fas fa-plus"></i></a>
                                 <ul class="dropdown-list">
-                                <li><a class="dropdown-link" href="/how-it-works">{{$language[19][session()->get('lang')]}}</a></li>
-                                <li><a class="dropdown-link" href="/our-story">{{$language[21][session()->get('lang')]}}</a></li>
-                                <li><a class="dropdown-link" href="/auto-dealerships">{{$language[23][session()->get('lang')]}}</a></li>
-                                <li><a class="dropdown-link" href="/trust-saftey">{{$language[24][session()->get('lang')]}}</a></li>
-                                <li><a class="dropdown-link" href="/terms">{{$language[18][session()->get('lang')]}}</a></li>
-                                <li><a class="dropdown-link" href="/community">{{$language[25][session()->get('lang')]}}</a></li>
-                                <li><a class="dropdown-link" href="/blog">{{$language[33][session()->get('lang')]}}</a></li>
+                                <li><a class="dropdown-link" href="/how-it-works">{{$language[125][session()->get('lang')]}}</a></li>
+                                <li><a class="dropdown-link" href="/our-story">{{$language[126][session()->get('lang')]}}</a></li>
+                                <li><a class="dropdown-link" href="/auto-dealerships">{{$language[127][session()->get('lang')]}}</a></li>
+                                <li><a class="dropdown-link" href="/trust-saftey">{{$language[128][session()->get('lang')]}}</a></li>
+                                <li><a class="dropdown-link" href="/terms">{{$language[129][session()->get('lang')]}}</a></li>
+                                <li><a class="dropdown-link" href="/community">{{$language[130][session()->get('lang')]}}</a></li>
+                                <li><a class="dropdown-link" href="/blog">{{$language[131][session()->get('lang')]}}</a></li>
                                 </ul>
                             </li>
-                            <li class="navbar-item"><a class="navbar-link" href="/category-list">{{$language[11][session()->get('lang')]}}</a></li>
+                            <li class="navbar-item"><a class="navbar-link" href="/category-list">{{$language[132][session()->get('lang')]}}</a></li>
                             <!-- <li class="navbar-item"><a class="navbar-link" href="/packages">{{$language[13][session()->get('lang')]}}</a></li> -->
-                            <li class="navbar-item"><a class="navbar-link" href="/faq">{{$language[36][session()->get('lang')]}}</a></li>
-                            <li class="navbar-item"><a class="navbar-link" href="/contact">{{$language[74][session()->get('lang')]}}</a></li>
+                            <li class="navbar-item"><a class="navbar-link" href="/faq">{{$language[133][session()->get('lang')]}}</a></li>
+                            <li class="navbar-item"><a class="navbar-link" href="/contact">{{$language[134][session()->get('lang')]}}</a></li>
 
                             @if(session()->get('lang') == 'english')
                             <li class="navbar-item"><a class="navbar-link" onclick="updateLanguage('arabic');" href="javascript:void(0)">عربي</a></li>
@@ -375,10 +375,10 @@ body {
                 @endif
                 <!-- <li><a href="/category-view"><i class="fas fa-star"></i><sup>0</sup></a></li> -->
                 @if(Auth::check())
-                <li><a class="plus-btn" href="/customer/create-post-ad"><i class="fas fa-plus"></i><span>{{$language[59][session()->get('lang')]}}</span></a>
+                <li><a class="plus-btn" href="/customer/create-post-ad"><i class="fas fa-plus"></i><span>{{$language[122][session()->get('lang')]}}</span></a>
                 </li>
                 @else 
-                <li><a class="plus-btn" href="/login"><i class="fas fa-plus"></i><span>{{$language[59][session()->get('lang')]}}</span></a>
+                <li><a class="plus-btn" href="/login"><i class="fas fa-plus"></i><span>{{$language[122][session()->get('lang')]}}</span></a>
                 </li>
                 @endif
                 @if(Auth::check())
@@ -419,8 +419,8 @@ body {
                 <div style="color:#000;" class="col-12 col-lg-8 col-md-8 offset-md-2 offset-lg-2">
                     <form method="post" id="news-form" class="news-form">
                     {{csrf_field()}}
-                        <input name="news_letter_email" type="email" placeholder="{{$language[65][session()->get('lang')]}}">
-                        <button type="button" onclick="SaveEmail()" class="btn btn-inline"><i class="fas fa-envelope"></i><span>{{$language[54][session()->get('lang')]}}</span></button>
+                        <input name="news_letter_email" type="email" placeholder="{{$language[135][session()->get('lang')]}}">
+                        <button type="button" onclick="SaveEmail()" class="btn btn-inline"><i class="fas fa-envelope"></i><span>{{$language[136][session()->get('lang')]}}</span></button>
                     </form>
                 </div>
             </div>
@@ -496,7 +496,7 @@ body {
         <div style="background: linear-gradient(to right, rgb(52 70 89 / 70%), rgb(0 0 0 / 70%))!important;color:#000 !important;" class="footer-end">
             <div class="container">
                 <div class="footer-end-content">
-                    <p style="color:#fff;">{{$language[52][session()->get('lang')]}}</p>
+                    <p style="color:#fff;">{{$language[137][session()->get('lang')]}}</p>
                     <ul class="social-transparent footer-social">
                         <li><a target="_blank" href="{{$settings->facebook}}"><i class="fab fa-facebook-f"></i></a></li>
                         <li><a target="_blank" href="{{$settings->twitter}}"><i class="fab fa-twitter"></i></a></li>
@@ -764,5 +764,13 @@ $(".ad-thumb-slider").slick({slidesToShow:3,slidesToScroll:1,asNavFor:".ad-detai
 });
 </script>
 @endif
+<script>
+$('input').keydown( function(e) {
+    var key = e.charCode ? e.charCode : e.keyCode ? e.keyCode : 0;
+    if(key == 13) {
+        e.preventDefault();
+    }
+});
+</script>
 </body>
 </html>
