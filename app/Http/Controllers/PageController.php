@@ -352,7 +352,7 @@ class PageController extends Controller
     public function saveuserregister(Request $request){
         $this->validate($request, [
             'email'=>'required|unique:users',
-            'mobile'=>'required|digits:9|unique:users',
+            'mobile'=>'required|digits:10|unique:users',
             'password' => 'min:6|required_with:password_confirmation|same:password_confirmation',
             'password_confirmation' => 'min:6',
             'terms_and_condition'=>'required',

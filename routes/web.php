@@ -16,6 +16,12 @@ use Illuminate\Support\Facades\Session;
 */
 
 session(['lang'=>'english']);
+
+Route::get('/optimize', function() {
+    $exitCode = Artisan::call('optimize');
+    return 'optimize cleared';
+});
+
 Route::get('/update-language/{lang}', [App\Http\Controllers\HomeController::class, 'updatelanguage']);
 
 Route::get('/get-ip', [App\Http\Controllers\HomeController::class, 'getClientIP']);

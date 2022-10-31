@@ -86,6 +86,18 @@ class AppServiceProvider extends ServiceProvider
             $google_ads = google_ads::find(1);
             $view->with(compact('settings','language','google_ads'));
         });
+        view()->composer('auth.passwords.email', function($view) {
+            $settings = settings::find('1');
+            $language = language::all();
+            $google_ads = google_ads::find(1);
+            $view->with(compact('settings','language','google_ads'));
+        });
+        view()->composer('auth.passwords.reset', function($view) {
+            $settings = settings::find('1');
+            $language = language::all();
+            $google_ads = google_ads::find(1);
+            $view->with(compact('settings','language','google_ads'));
+        });
 
     }
 }

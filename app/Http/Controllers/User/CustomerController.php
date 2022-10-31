@@ -45,7 +45,7 @@ class CustomerController extends Controller
             'first_name'=>'required',
             'last_name'=>'required',
             'email'=>'required|unique:users,email,'.$request->id,
-            'mobile'=>'required|digits:9|unique:users,mobile,'.$request->id,
+            'mobile'=>'required|digits:10|unique:users,mobile,'.$request->id,
             'gender'=>'required',
             'banner_image' => 'mimes:jpeg,jpg,png|max:10000', // max 1000kb
             'profile_image' => 'mimes:jpeg,jpg,png|max:10000', // max 1000kb
