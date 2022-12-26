@@ -78,7 +78,7 @@
                 <!-- <form class="banner-search"> -->
                     <div class="banner-main-search">
                         <div class="col-lg-10 col-md-9 col-sm-12 p-0 marcus">
-                            <input autocomplete="off" name="search" id="search" type="text" class="form-control" placeholder="">
+                            <input autocomplete="off" name="search" id="search" type="text" class="form-control" placeholder="{{$language[139][session()->get('lang')]}}">
                             <!-- {{$language[139][session()->get('lang')]}} -->
                             <button type="button" class="banner-option-btn tooltip">
                             <i class="fas fa-sliders-h"></i>

@@ -34,8 +34,9 @@
   overflow: hidden;
   box-shadow: 0px 0px 1px 3px rgb(168 168 168 / 8%);
 }
+
 .inputGroup label:before {
-  width: 10px;
+  width: 100px;
   height: 10px;
   border-radius: 50%;
   content: "";
@@ -245,14 +246,15 @@
                     <h2>{{$language[186][session()->get('lang')]}}</h2>
                     <p>{{$language[187][session()->get('lang')]}}.</p>
                 </div>
-                <p class="text-center" style=" color: #323539; font-weight: 800; letter-spacing: 2px;">{{$language[188][session()->get('lang')]}}</p>
-                <div class="inputGroup">
-                    <input value="0" checked id="business_type1" name="business_type" type="radio"/>
-                    <label for="business_type1">{{$language[189][session()->get('lang')]}}</label>
+                
+                <p class="text-center" style="color: #323539; font-weight: 800; letter-spacing: 2px;">{{$language[188][session()->get('lang')]}}</p>
+                <div style="width:100%;" class="inputGroup">
+                    <input style="width:100%;" value="0" checked id="business_type1" name="business_type" type="radio"/>
+                    <label style="width:100%;" for="business_type1">{{$language[189][session()->get('lang')]}}</label>
                 </div>
-                <div class="inputGroup">
-                    <input value="1" id="business_type2" name="business_type" type="radio"/>
-                    <label for="business_type2">{{$language[190][session()->get('lang')]}}</label>
+                <div style="width:100%;" class="inputGroup">
+                    <input style="width:100%;" value="1" id="business_type2" name="business_type" type="radio"/>
+                    <label style="width:100%;" for="business_type2">{{$language[190][session()->get('lang')]}}</label>
                 </div>
                 <!-- <ul class="user-form-option">
                     <li><a href="#"><i class="fab fa-facebook-f"></i><span>facebook</span></a></li>
