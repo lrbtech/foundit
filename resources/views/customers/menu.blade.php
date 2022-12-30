@@ -13,7 +13,7 @@
                             <h4><a href="#">{{$user->first_name}} {{$user->last_name}}</a></h4>
                             <!-- <h5>new seller</h5> -->
                             <ul class="dash-meta">
-                                <li><i class="fas fa-phone-alt"></i><span>{{$user->mobile}}</span></li>
+                                <li><i class="fas fa-phone-alt"></i><span>+971 {{$user->mobile}}</span></li>
                                 <li><i class="fas fa-envelope"></i><span>{{$user->email}}</span></li>
                                 <li><i class="fas fa-map-marker-alt"></i><span>{{$user->address}}</span></li>
                             </ul>
