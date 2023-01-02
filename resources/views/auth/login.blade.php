@@ -227,7 +227,7 @@
                             </div>
                         </div>
                         <div class="col-6">
-                            <div class="form-group text-right"><a href="{{ route('password.request') }}" class="form-forgot">{{$language[184][session()->get('lang')]}}?</a>
+                            <div class="form-group text-right"><a href="{{ route('password.request') }}" class="form-forgot">{{$language[184][session()->get('lang')]}}</a>
                             </div>
                         </div>
                         <div class="col-12">
@@ -236,7 +236,7 @@
                     </div>
                 </form>
                 <!-- <div class="user-form-direction">
-                    <p>{{$language[182][session()->get('lang')]}}.</p>
+                    <p>{{$language[182][session()->get('lang')]}}</p>
                 </div> -->
             </div>
             <div class="tab-pane" id="register-tab">
