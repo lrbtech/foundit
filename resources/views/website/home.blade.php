@@ -57,7 +57,7 @@
 <section class="banner-part">
         <div class="container">
             <div class="banner-content">
-                <h1>{{$language[138][session()->get('lang')]}}!</h1>
+                <h1>{{$language[138][session()->get('lang')]}}</h1>
                <!--  <p>The best place to find everything in the UAE | Classifieds | Ads. Currently it says Found iT</p><a href="leftbar-list.html" class="btn btn-outline"><i
                         class="fas fa-eye"></i><span>Show all ads</span></a> -->
 
@@ -3548,5 +3548,13 @@ function SearchPost1(){
     }
     window.location.href = "/search-post/"+search1+'/'+city1+'/'+category1+'/'+subcategory1+'/0';
 }
+
+$('#search').keydown( function(e) {
+    var key = e.charCode ? e.charCode : e.keyCode ? e.keyCode : 0;
+    if(key == 13) {
+        //e.preventDefault();
+        SearchPost();
+    }
+});
 </script>
 @endsection

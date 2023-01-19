@@ -359,7 +359,7 @@ body {
                             @csrf
                             </form>
                             @endif
-                            
+
                             @if(session()->get('lang') == 'english')
                             <li class="navbar-item"><a class="navbar-link" onclick="updateLanguage('arabic');" href="javascript:void(0)">عربي</a></li>
                             @else 
@@ -785,13 +785,7 @@ $('#headersearch').keydown( function(e) {
         SearchPost();
     }
 });
-$('#search').keydown( function(e) {
-    var key = e.charCode ? e.charCode : e.keyCode ? e.keyCode : 0;
-    if(key == 13) {
-        //e.preventDefault();
-        SearchPost();
-    }
-});
+
 </script>
 </body>
 </html>

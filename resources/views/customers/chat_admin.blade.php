@@ -40,7 +40,7 @@
                     <a href="#" title="Forward" class="fas fa-forward"></a>
                 </div> -->
             </div>
-            <small class="inbox-chat-time">{{ \App\Http\Controllers\HomeController::humanreadtime($row->created_at) }}!</small>
+            <small class="inbox-chat-time">{{ \App\Http\Controllers\HomeController::humanreadtime($row->created_at) }}</small>
         </div>
     </li>
     @else
@@ -53,7 +53,7 @@
                     <a href="#" title="Forward" class="fas fa-forward"></a>
                 </div> -->
             </div>
-            <small class="inbox-chat-time">{{ \App\Http\Controllers\HomeController::humanreadtime($row->created_at) }}!</small>
+            <small class="inbox-chat-time">{{ \App\Http\Controllers\HomeController::humanreadtime($row->created_at) }}</small>
         </div>
     </li>
     @endif 

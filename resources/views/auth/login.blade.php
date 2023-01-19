@@ -175,7 +175,7 @@
             <div class="user-form-content"><a href="#"><img src="/website/images/logo.png" alt="logo"></a>
                 <!-- <h1>Advertise your assets <span>Buy what are you needs.</span></h1> -->
                 <h1>{{$language[175][session()->get('lang')]}}</h1>
-                <!-- <h1 style="color:#00a7ff">{{$language[170][session()->get('lang')]}}!<span>{{$language[171][session()->get('lang')]}}!</span></h1> -->
+                <!-- <h1 style="color:#00a7ff">{{$language[170][session()->get('lang')]}}<span>{{$language[171][session()->get('lang')]}}</span></h1> -->
                 <p>{{$language[176][session()->get('lang')]}}</p>
             </div>
         </div>
