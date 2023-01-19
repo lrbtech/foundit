@@ -500,7 +500,7 @@ class PageController extends Controller
             'news_letter_email'=>'required|unique:news_letter_emails,email',
           ],[
             'news_letter_email.required' => 'For subscribe to foundit Email address is mandatory',
-            'news_letter_email.unique' => 'Subscriber email address already exist',
+            'news_letter_email.unique' => 'You are already subscribed',
         ]);
 
         $exist = news_letter_email::where('email',$request->news_letter_email)->get();

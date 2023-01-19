@@ -103,9 +103,9 @@
                         <p>Showing {{ $post_ads->firstItem() }} - {{ $post_ads->lastItem() }} of {{$post_ads->total()}} results</p>
                     </div>
                     <select name="sorting" id="sorting" onchange="changesort()" class="product-short-select custom-select">
-                        <option value="0" selected>Short by New Item</option>
-                        <option value="1">Short by Low to High Price</option>
-                        <option value="2">Short by High to Low Price</option>
+                        <option value="0" selected>Sort by New Item</option>
+                        <option value="1">Sort by Low to High Price</option>
+                        <option value="2">Sort by High to Low Price</option>
                     </select>
                     <ul class="product-card-type">
                         <li class="grid-verti active"><i class="fas fa-grip-vertical"></i></li>

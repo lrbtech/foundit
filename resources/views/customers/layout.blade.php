@@ -353,6 +353,12 @@ body {
                             <li class="navbar-item"><a class="navbar-link" href="/faq">{{$language[133][session()->get('lang')]}}</a></li>
                             <li class="navbar-item"><a class="navbar-link" href="/contact">{{$language[134][session()->get('lang')]}}</a></li>
 
+                            @if(Auth::check())
+                            <li class="navbar-item"><a class="navbar-link" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a></li>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            @csrf
+                            </form>
+                            @endif
                             @if(session()->get('lang') == 'english')
                             <li class="navbar-item"><a class="navbar-link" onclick="updateLanguage('arabic');" href="javascript:void(0)">عربي</a></li>
                             @else 
@@ -769,6 +775,20 @@ $('input').keydown( function(e) {
     var key = e.charCode ? e.charCode : e.keyCode ? e.keyCode : 0;
     if(key == 13) {
         e.preventDefault();
+    }
+});
+$('#headersearch').keydown( function(e) {
+    var key = e.charCode ? e.charCode : e.keyCode ? e.keyCode : 0;
+    if(key == 13) {
+        //e.preventDefault();
+        SearchPost();
+    }
+});
+$('#search').keydown( function(e) {
+    var key = e.charCode ? e.charCode : e.keyCode ? e.keyCode : 0;
+    if(key == 13) {
+        //e.preventDefault();
+        SearchPost();
     }
 });
 </script>

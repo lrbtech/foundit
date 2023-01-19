@@ -22,8 +22,7 @@
     </div>
 
     <main class="ps-main">
-        <section class="container-fluid" style="padding-left: 100px;
-    padding-right: 100px;">
+        <section class="container-fluid" style="padding-left: 100px;padding-right: 100px;">
             <div class="row ps-uniqueGadgets ps-gridList ps-main-section">
                 <!-- SIDEBAR START -->
                 <div class="col-md-5 col-lg-4 col-xl-3">
