@@ -15,7 +15,9 @@
     <meta name="author" content="LrbInfotech">
     <meta name="title" content="FoundIT - Classified">
     <meta name="keywords" content="The best place to find everything in the UAE | Classifieds | Ads. Currently it says Found iT"> -->
-    <title>Foundit.ae - The Best Place To Find Everything In The UAE</title>
+    <title>The best place to find everything in the UAE</title>
+    <meta name="description"
+          content="Find properties, cars or items for sale in any Emirate. Foundit is your leading free classifieds website in the UAE to buy, sell and find anything."/>
     <link rel="icon" href="/website/images/favicon.png">
     <link rel="stylesheet" href="/website/fonts/flaticon/flaticon.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
