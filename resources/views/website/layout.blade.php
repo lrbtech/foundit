@@ -11,19 +11,18 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="author" content="LrbInfotech">
-    <meta name="title" content="FoundIT - Classified">
-    <meta name="keywords" content="The best place to find everything in the UAE | Classifieds | Ads. Currently it says Found iT"> -->
-    <title>Foundit.ae - The best place to find everything in the UAE</title>
-    <meta name="description"
-          content="Find properties, cars or items for sale in any Emirate. Foundit.ae is your leading free classifieds website in the UAE to buy, sell and find anything."/>
-    <link rel="icon" href="/website/images/favicon.png">
-    <link rel="stylesheet" href="/website/fonts/flaticon/flaticon.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
-    <link rel="stylesheet" href="/website/css/vendor/slick.min.css">
-    <link rel="stylesheet" href="/website/css/vendor/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.rtl.min.css">
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="LrbInfotech">
+<meta name="title" content="FoundIT - Classified">
+<meta name="keywords" content="The best place to find everything in the UAE | Classifieds | Ads. Currently it says Found iT"> -->
+<title>Foundit.ae - The best place to find everything in the UAE</title>
+<meta name="description" content="Find properties, cars or items for sale in any Emirate. Foundit.ae is your leading free classifieds website in the UAE to buy, sell and find anything."/>
+<link rel="icon" href="/website/images/favicon.png">
+<link rel="stylesheet" href="/website/fonts/flaticon/flaticon.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+<link rel="stylesheet" href="/website/css/vendor/slick.min.css">
+<link rel="stylesheet" href="/website/css/vendor/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.rtl.min.css">
 
 @if(session()->get('lang') == 'english')
 <link rel="stylesheet" href="/website/css/custom/main.css">
@@ -124,14 +123,14 @@
   outline: none;
 }
 
-.goog-te-banner-frame.skiptranslate {
+/* .goog-te-banner-frame.skiptranslate {
     display: none !important;
-    } 
+}  */
 body {
     top: 0px !important; 
-    }
+}
 @media screen and (max-width: 520px){
-    .news-content h2 {
+.news-content h2 {
     margin-bottom: 15px;
     font-size: 16px;
     margin-top: 10px;
@@ -552,47 +551,13 @@ if(viewMode == "desktop"){
     });
     </script>
 @yield('extra-js')
-<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 <script type="text/javascript">
-// $( document ).ready(function() {
-// $('#:2.container').hide();
-// });
-    // function googleTranslateElementInit() {
-    //     new google.translate.TranslateElement({pageLanguage: 'en',includedLanguages: 'ar,en',}, 'google_translate_element');
-    // }
-    // function googleTranslateElementInit() {
-    //     new google.translate.TranslateElement({pageLanguage:'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
-    // }
-    // function googleTranslateElementInit() {
-    //   new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.FloatPosition.TOP_LEFT}, 'google_translate_element');
-    // }
-
-	// function triggerHtmlEvent(element, eventName) {
-	//   var event;
-	//   if (document.createEvent) {
-	// 	event = document.createEvent('HTMLEvents');
-	// 	event.initEvent(eventName, true, true);
-	// 	element.dispatchEvent(event);
-	//   } else {
-	// 	event = document.createEventObject();
-	// 	event.eventType = eventName;
-	// 	element.fireEvent('on' + event.eventType, event);
-	//   }
-	// }
-
     function googleTranslateElementInit() {
         new google.translate.TranslateElement({ pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false }, 'google_translate_element');
     }
 
     function translateLanguage(lang) {
-        // googleTranslateElementInit();
-        // if(lang == 'Arabic'){
-        //     $("html").children().css("direction","rtl");
-        // }
-        // else{
-        //     $("html").children().css("direction","ltr");
-        //     location.reload();
-        // }
         var lang1;
         if(lang == 'English'){
             lang1='english';
@@ -611,7 +576,7 @@ if(viewMode == "desktop"){
         });
         var $frame = $('.goog-te-menu-frame:first');
         if (!$frame.size()) {
-            alert("Error: Could not find Google translate frame.");
+            //alert("Error: Could not find Google translate frame.");
             return false;
         }
         $frame.contents().find('.goog-te-menu2-item span.text:contains(' + lang + ')').get(0).click();
